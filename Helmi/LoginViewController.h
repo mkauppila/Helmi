@@ -9,7 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *cardNumberTextField;
-@property (weak, nonatomic) IBOutlet UITextField *pinCodeTextField;
-@property (weak, nonatomic) IBOutlet UIButton *logInButton;
 @end

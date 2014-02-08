@@ -10,6 +10,10 @@
 
 @interface LoginViewController ()
 
+@interface LoginViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *cardNumberTextField;
+@property (weak, nonatomic) IBOutlet UITextField *pinCodeTextField;
+@property (weak, nonatomic) IBOutlet UIButton *logInButton;
 @end
 
 @implementation LoginViewController
