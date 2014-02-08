@@ -1,3 +1,3 @@
 platform :ios, '7.0'
 
-end
+pod 'ReactiveCocoa',    '~> 2.1.7'
