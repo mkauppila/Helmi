@@ -14,7 +14,7 @@
 		28678EB818A674E400A1960B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28678EB718A674E400A1960B /* main.m */; };
 		28678EBC18A674E400A1960B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28678EBB18A674E400A1960B /* AppDelegate.m */; };
 		28678EBF18A674E400A1960B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28678EBD18A674E400A1960B /* Main.storyboard */; };
-		28678EC218A674E400A1960B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28678EC118A674E400A1960B /* ViewController.m */; };
+		28678EC218A674E400A1960B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28678EC118A674E400A1960B /* LoginViewController.m */; };
 		28678EC418A674E400A1960B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28678EC318A674E400A1960B /* Images.xcassets */; };
 		28678ECB18A674E400A1960B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678ECA18A674E400A1960B /* XCTest.framework */; };
 		28678ECC18A674E400A1960B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678EAB18A674E400A1960B /* Foundation.framework */; };
@@ -45,8 +45,8 @@
 		28678EBA18A674E400A1960B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		28678EBB18A674E400A1960B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		28678EBE18A674E400A1960B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		28678EC018A674E400A1960B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		28678EC118A674E400A1960B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		28678EC018A674E400A1960B /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		28678EC118A674E400A1960B /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		28678EC318A674E400A1960B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		28678EC918A674E400A1960B /* HelmiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelmiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28678ECA18A674E400A1960B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -115,8 +115,8 @@
 				28678EBA18A674E400A1960B /* AppDelegate.h */,
 				28678EBB18A674E400A1960B /* AppDelegate.m */,
 				28678EBD18A674E400A1960B /* Main.storyboard */,
-				28678EC018A674E400A1960B /* ViewController.h */,
-				28678EC118A674E400A1960B /* ViewController.m */,
+				28678EC018A674E400A1960B /* LoginViewController.h */,
+				28678EC118A674E400A1960B /* LoginViewController.m */,
 				28678EC318A674E400A1960B /* Images.xcassets */,
 				28678EB218A674E400A1960B /* Supporting Files */,
 			);
@@ -249,7 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28678EC218A674E400A1960B /* ViewController.m in Sources */,
+				28678EC218A674E400A1960B /* LoginViewController.m in Sources */,
 				28678EBC18A674E400A1960B /* AppDelegate.m in Sources */,
 				28678EB818A674E400A1960B /* main.m in Sources */,
 			);
