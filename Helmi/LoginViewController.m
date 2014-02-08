@@ -8,7 +8,7 @@
 
 #import "LoginViewController.h"
 
-@interface LoginViewController ()
+#import <ReactiveCocoa.h>
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *cardNumberTextField;
@@ -27,7 +27,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
