@@ -9,18 +9,34 @@
 #import "LoginViewController.h"
 
 #import <ReactiveCocoa.h>
+#import <libextobjc/EXTScope.h>
+
+#import "LoginViewModel.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *cardNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *pinCodeTextField;
 @property (weak, nonatomic) IBOutlet UIButton *logInButton;
+
+@property (strong, nonatomic) LoginViewModel *loginViewModel;
 @end
 
 @implementation LoginViewController
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        _loginViewModel = [LoginViewModel new];
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    @weakify(self);
     
     RACSignal *enableLogInButtonSignal = [RACSignal
                                           combineLatest:@[self.cardNumberTextField.rac_textSignal,
@@ -32,9 +48,17 @@
     RACCommand *logInCommand = [[RACCommand alloc]
                                 initWithEnabled:enableLogInButtonSignal
                                 signalBlock:^RACSignal *(id input) {
-                                    NSLog(@"log in button pressed");
-                                    return [RACSignal empty];
+                                    @strongify(self);
+                                    return [self.loginViewModel logInUsingCardNumber:self.cardNumberTextField.text
+                                                                          andPinCode:self.pinCodeTextField.text];
                                 }];
+    
+    [logInCommand.executionSignals subscribeNext:^(RACSignal *loginSignal) {
+        [loginSignal subscribeNext:^(NSString *message) {
+            NSLog(@"log in signal next");
+            NSLog(@"- message: %@", message);
+        }];
+    }];
     
     self.logInButton.rac_command = logInCommand;
 }
