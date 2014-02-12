@@ -22,6 +22,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    RAC(self.logInButton, enabled) = [RACSignal
+                                      combineLatest:@[self.cardNumberTextField.rac_textSignal,
+                                                      self.pinCodeTextField.rac_textSignal]
+                                      reduce:^(NSString *cardNumber, NSString *pinCode) {
+                                          return @(cardNumber.length > 0 && pinCode.length >= 4);
+                                      }];
 }
 
 - (void)didReceiveMemoryWarning
