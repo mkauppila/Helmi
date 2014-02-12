@@ -21,14 +21,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
-    RAC(self.logInButton, enabled) = [RACSignal
-                                      combineLatest:@[self.cardNumberTextField.rac_textSignal,
-                                                      self.pinCodeTextField.rac_textSignal]
-                                      reduce:^(NSString *cardNumber, NSString *pinCode) {
-                                          return @(cardNumber.length > 0 && pinCode.length >= 4);
-                                      }];
+    RACSignal *enableLogInButtonSignal = [RACSignal
+                                          combineLatest:@[self.cardNumberTextField.rac_textSignal,
+                                                          self.pinCodeTextField.rac_textSignal]
+                                          reduce:^(NSString *cardNumber, NSString *pinCode) {
+                                              return @(cardNumber.length > 0 && pinCode.length >= 4);
+                                          }];
+    
+    RACCommand *logInCommand = [[RACCommand alloc]
+                                initWithEnabled:enableLogInButtonSignal
+                                signalBlock:^RACSignal *(id input) {
+                                    NSLog(@"log in button pressed");
+                                    return [RACSignal empty];
+                                }];
+    
+    self.logInButton.rac_command = logInCommand;
 }
 
 - (void)didReceiveMemoryWarning
