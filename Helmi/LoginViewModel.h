@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @class RACSignal;
+@class RACCommand;
 
 @interface LoginViewModel : NSObject
 
 @property (strong, nonatomic) NSString *libraryCardNumber;
 @property (strong, nonatomic) NSString *pinCode;
+
+- (RACCommand *)logInCommand;
 
 - (RACSignal *)logInUsingCardNumber:(NSString *)cardNumber andPinCode:(NSString *)pinCode;
 

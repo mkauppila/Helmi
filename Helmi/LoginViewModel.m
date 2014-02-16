@@ -9,8 +9,26 @@
 #import "LoginViewModel.h"
 
 #import <ReactiveCocoa.h>
+#import <libextobjc/EXTScope.h>
 
 @implementation LoginViewModel
+
+- (RACCommand *)logInCommand
+{
+    @weakify(self);
+    
+    RACSignal *enabled = [RACSignal combineLatest:@[RACObserve(self, libraryCardNumber),
+                                                    RACObserve(self, pinCode)]
+                                           reduce:^(NSString *cardNumber, NSString *pinCode) {
+                                               return @(cardNumber.length > 0 && pinCode.length >= 4);
+                                           }];
+    RACCommand *login = [[RACCommand alloc] initWithEnabled:enabled
+                                                signalBlock:^RACSignal *(id input) {
+                                                    @strongify(self);
+                                                    return [self logInUsingCardNumber:@"a" andPinCode:@"b"];
+                                                }];
+    return login;
+}
 
 - (RACSignal *)logInUsingCardNumber:(NSString *)cardNumber andPinCode:(NSString *)pinCode
 {

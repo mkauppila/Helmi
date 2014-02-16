@@ -37,38 +37,13 @@
     [super viewDidLoad];
 
     [self bindWithViewModel];
-    
-    @weakify(self);
-    
-    RACSignal *enableLogInButtonSignal = [RACSignal
-                                          combineLatest:@[self.cardNumberTextField.rac_textSignal,
-                                                          self.pinCodeTextField.rac_textSignal]
-                                          reduce:^(NSString *cardNumber, NSString *pinCode) {
-                                              return @(cardNumber.length > 0 && pinCode.length >= 4);
-                                          }];
-    
-    RACCommand *logInCommand = [[RACCommand alloc]
-                                initWithEnabled:enableLogInButtonSignal
-                                signalBlock:^RACSignal *(id input) {
-                                    @strongify(self);
-                                    return [self.loginViewModel logInUsingCardNumber:self.cardNumberTextField.text
-                                                                          andPinCode:self.pinCodeTextField.text];
-                                }];
-    
-    [logInCommand.executionSignals subscribeNext:^(RACSignal *loginSignal) {
-        [loginSignal subscribeNext:^(NSString *message) {
-            NSLog(@"log in signal next");
-            NSLog(@"- message: %@", message);
-        }];
-    }];
-    
-    self.logInButton.rac_command = logInCommand;
 }
 
 - (void)bindWithViewModel
 {
     RAC(self.loginViewModel, libraryCardNumber) = self.cardNumberTextField.rac_textSignal;
     RAC(self.loginViewModel, pinCode) = self.pinCodeTextField.rac_textSignal;
+    self.logInButton.rac_command = [self.loginViewModel logInCommand];
 }
 
 - (void)didReceiveMemoryWarning
