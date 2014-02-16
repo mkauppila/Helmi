@@ -27,6 +27,7 @@
                                                     @strongify(self);
                                                     return [self initiateLogIn];
                                                 }];
+    login.allowsConcurrentExecution = NO;
     return login;
 }
 
