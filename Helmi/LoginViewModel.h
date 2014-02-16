@@ -12,6 +12,9 @@
 
 @interface LoginViewModel : NSObject
 
+@property (strong, nonatomic) NSString *libraryCardNumber;
+@property (strong, nonatomic) NSString *pinCode;
+
 - (RACSignal *)logInUsingCardNumber:(NSString *)cardNumber andPinCode:(NSString *)pinCode;
 
 @end

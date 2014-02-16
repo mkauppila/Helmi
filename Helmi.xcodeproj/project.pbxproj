@@ -127,10 +127,10 @@
 				28678EBD18A674E400A1960B /* Main.storyboard */,
 				28678EC018A674E400A1960B /* LoginViewController.h */,
 				28678EC118A674E400A1960B /* LoginViewController.m */,
-				28678EC318A674E400A1960B /* Images.xcassets */,
-				28678EB218A674E400A1960B /* Supporting Files */,
 				286C639B18ABEC6B005C84D5 /* LoginViewModel.h */,
 				286C639C18ABEC6B005C84D5 /* LoginViewModel.m */,
+				28678EC318A674E400A1960B /* Images.xcassets */,
+				28678EB218A674E400A1960B /* Supporting Files */,
 			);
 			path = Helmi;
 			sourceTree = "<group>";

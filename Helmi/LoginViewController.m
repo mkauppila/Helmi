@@ -35,6 +35,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    [self bindWithViewModel];
     
     @weakify(self);
     
@@ -61,6 +63,12 @@
     }];
     
     self.logInButton.rac_command = logInCommand;
+}
+
+- (void)bindWithViewModel
+{
+    RAC(self.loginViewModel, libraryCardNumber) = self.cardNumberTextField.rac_textSignal;
+    RAC(self.loginViewModel, pinCode) = self.pinCodeTextField.rac_textSignal;
 }
 
 - (void)didReceiveMemoryWarning
