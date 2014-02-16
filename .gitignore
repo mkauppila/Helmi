@@ -18,6 +18,9 @@ DerivedData
 .idea/
 *.hmap
 
+# vim
+*.swp
+
 # CocoaPods
 Pods/
 Podfile.lock
