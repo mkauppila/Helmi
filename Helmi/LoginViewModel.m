@@ -11,7 +11,7 @@
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
 #import <AFHTTPRequestOperationManager+RACSupport.h>
-	
+
 @implementation LoginViewModel
 
 - (RACCommand *)logInCommand
@@ -46,16 +46,16 @@
     
     NSString *urlString = [NSString stringWithFormat:@"https://lainakortti.helmet-kirjasto.fi/patron/%@", self.libraryCardNumber];
     RACSignal *s = [[[manager rac_GET:urlString parameters:nil] logAll] replayLazily];
+    
+    @weakify(self);
     [s subscribeNext:^(RACTuple *response) {
+        @strongify(self);
         NSLog(@"first: %@", response.first);
         NSLog(@"second: %@", response.second);
         
-        //NSLog(@"json: %@", json);
+        self.didSucceedToLogin = YES;
     } error:^(NSError *error) {
         NSLog(@"network error: %@", error);
-        // show a error thing
-        
-        //return [RACSignal empty];
     }];
     
     return s;

@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) NSString *libraryCardNumber;
 @property (strong, nonatomic) NSString *pinCode;
+@property (assign, nonatomic) BOOL didSucceedToLogin;
 
 - (RACCommand *)logInCommand;
 

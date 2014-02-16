@@ -43,7 +43,14 @@
 {
     RAC(self.loginViewModel, libraryCardNumber) = self.cardNumberTextField.rac_textSignal;
     RAC(self.loginViewModel, pinCode) = self.pinCodeTextField.rac_textSignal;
-    self.logInButton.rac_command = [self.loginViewModel logInCommand];
+    
+    [[[RACObserve(self.loginViewModel, didSucceedToLogin) distinctUntilChanged] filter:^BOOL(NSNumber *didSucceedToLogin) {
+        return [didSucceedToLogin boolValue];
+    }] subscribeNext:^(id x) {
+        NSLog(@"-- go on, user did log in!");
+    }];
+    
+    self.logInButton.rac_command = [self.loginViewModel logInCommand];;
 }
 
 - (void)didReceiveMemoryWarning
