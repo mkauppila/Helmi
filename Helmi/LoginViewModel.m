@@ -21,7 +21,8 @@
     RACSignal *enabled = [RACSignal combineLatest:@[RACObserve(self, libraryCardNumber),
                                                     RACObserve(self, pinCode)]
                                            reduce:^(NSString *cardNumber, NSString *pinCode) {
-                                               return @(cardNumber.length > 0 && pinCode.length >= 4);
+                                               return @([self validateLibraryCardNumber:cardNumber] &&
+                                                        [self validatePinCode:pinCode]);
                                            }];
     RACCommand *login = [[RACCommand alloc] initWithEnabled:enabled
                                                 signalBlock:^RACSignal *(id input) {
@@ -30,6 +31,16 @@
                                                 }];
     login.allowsConcurrentExecution = NO;
     return login;
+}
+
+- (BOOL)validateLibraryCardNumber:(NSString *)cardNumber
+{
+    return cardNumber.length > 0;
+}
+
+- (BOOL)validatePinCode:(NSString *)pinCode
+{
+    return pinCode.length >= 4;
 }
 
 - (RACSignal *)initiateLogIn
