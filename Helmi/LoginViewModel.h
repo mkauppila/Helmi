@@ -18,6 +18,6 @@
 
 - (RACCommand *)logInCommand;
 
-- (RACSignal *)logInUsingCardNumber:(NSString *)cardNumber andPinCode:(NSString *)pinCode;
+- (RACSignal *)initiateLogIn;
 
 @end

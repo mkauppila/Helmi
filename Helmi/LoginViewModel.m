@@ -25,12 +25,12 @@
     RACCommand *login = [[RACCommand alloc] initWithEnabled:enabled
                                                 signalBlock:^RACSignal *(id input) {
                                                     @strongify(self);
-                                                    return [self logInUsingCardNumber:@"a" andPinCode:@"b"];
+                                                    return [self initiateLogIn];
                                                 }];
     return login;
 }
 
-- (RACSignal *)logInUsingCardNumber:(NSString *)cardNumber andPinCode:(NSString *)pinCode
+- (RACSignal *)initiateLogIn
 {
     RACReplaySubject *result = [RACReplaySubject subject];
     
