@@ -10,7 +10,8 @@
 
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
-
+#import <AFHTTPRequestOperationManager+RACSupport.h>
+	
 @implementation LoginViewModel
 
 - (RACCommand *)logInCommand
@@ -33,12 +34,31 @@
 
 - (RACSignal *)initiateLogIn
 {
-    RACReplaySubject *result = [RACReplaySubject subject];
+    NSLog(@"library card number: %@", self.libraryCardNumber);
+    NSLog(@"pin code: %@", self.pinCode);
     
-    [result sendNext:@"Okay, log in happend"];
-    [result sendCompleted];
     
-    return result;
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer new];
+
+    [manager setRequestSerializer:[AFHTTPRequestSerializer serializer]];
+    [[manager requestSerializer] setAuthorizationHeaderFieldWithUsername:self.libraryCardNumber password:self.pinCode];
+    
+    NSString *urlString = [NSString stringWithFormat:@"https://lainakortti.helmet-kirjasto.fi/patron/%@", self.libraryCardNumber];
+    RACSignal *s = [[[manager rac_GET:urlString parameters:nil] logAll] replayLazily];
+    [s subscribeNext:^(RACTuple *response) {
+        NSLog(@"first: %@", response.first);
+        NSLog(@"second: %@", response.second);
+        
+        //NSLog(@"json: %@", json);
+    } error:^(NSError *error) {
+        NSLog(@"network error: %@", error);
+        // show a error thing
+        
+        //return [RACSignal empty];
+    }];
+    
+    return s;
 }
 
 @end
