@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *cardNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *pinCodeTextField;
 @property (weak, nonatomic) IBOutlet UIButton *logInButton;
+@property (weak, nonatomic) IBOutlet UILabel *loginErrorLabel;
 
 @property (strong, nonatomic) LoginViewModel *loginViewModel;
 @end
@@ -43,6 +44,8 @@
 {
     RAC(self.loginViewModel, libraryCardNumber) = self.cardNumberTextField.rac_textSignal;
     RAC(self.loginViewModel, pinCode) = self.pinCodeTextField.rac_textSignal;
+    
+    RAC(self.loginErrorLabel, text) = RACObserve(self.loginViewModel, loginErrorMessage);
     
     [[[RACObserve(self.loginViewModel, didSucceedToLogin) distinctUntilChanged]
       filter:^BOOL(NSNumber *didSucceedToLogin) {
