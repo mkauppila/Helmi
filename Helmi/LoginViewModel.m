@@ -12,7 +12,23 @@
 #import <libextobjc/EXTScope.h>
 #import <AFHTTPRequestOperationManager+RACSupport.h>
 
+#import "HelmetAPIClient.h"
+
+@interface LoginViewModel ()
+@property (strong, nonatomic) HelmetAPIClient *apiClient;
+@end
+
 @implementation LoginViewModel
+
+- (instancetype)initWithAPIClient:(HelmetAPIClient *)apiClient
+{
+    self = [super init];
+    if (self) {
+        _apiClient = apiClient;
+    }
+    return self;
+}
+
 
 - (RACCommand *)logInCommand
 {

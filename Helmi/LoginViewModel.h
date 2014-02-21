@@ -11,6 +11,8 @@
 @class RACSignal;
 @class RACCommand;
 
+@class HelmetAPIClient;
+
 @interface LoginViewModel : NSObject
 
 @property (strong, nonatomic) NSString *libraryCardNumber;
@@ -18,6 +20,8 @@
 
 @property (assign, nonatomic) BOOL didSucceedToLogin;
 @property (strong, nonatomic) NSString *loginErrorMessage;
+
+- (instancetype)initWithAPIClient:(HelmetAPIClient *)apiClient;
 
 - (RACCommand *)logInCommand;
 
