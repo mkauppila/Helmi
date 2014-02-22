@@ -56,7 +56,7 @@
         NSLog(@"-- go on, user did log in!");
     }];
     
-    self.logInButton.rac_command = [self.loginViewModel logInCommand];;
+    self.logInButton.rac_command = [self.loginViewModel logInCommand];
 }
 
 - (void)didReceiveMemoryWarning
