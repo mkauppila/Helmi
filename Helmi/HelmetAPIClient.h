@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class RACSignal;
+
 @interface HelmetAPIClient : NSObject
+
+- (RACSignal *)executeLogIn:(NSString *)libraryCardNumber pinCode:(NSString *)pinCode;
 
 @end
