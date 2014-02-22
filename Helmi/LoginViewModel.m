@@ -64,15 +64,9 @@
     NSLog(@"library card number: %@", self.libraryCardNumber);
     NSLog(@"pin code: %@", self.pinCode);
     
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFJSONResponseSerializer new];
 
-    [manager setRequestSerializer:[AFHTTPRequestSerializer serializer]];
-    [[manager requestSerializer] setAuthorizationHeaderFieldWithUsername:self.libraryCardNumber password:self.pinCode];
-    
-    NSString *urlString = [NSString stringWithFormat:@"https://lainakortti.helmet-kirjasto.fi/patron/%@", self.libraryCardNumber];
-    RACSignal *s = [[[manager rac_GET:urlString parameters:nil] logAll] replayLazily];
+    RACSignal *s = [self.apiClient executeLogIn:self.libraryCardNumber
+                                        pinCode:self.pinCode];
     
     @weakify(self);
     [s subscribeNext:^(RACTuple *response) {
