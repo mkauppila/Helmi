@@ -13,6 +13,8 @@
 
 #import "LoginViewModel.h"
 
+#import "HelmetAPIClient.h"
+
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *cardNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *pinCodeTextField;
@@ -28,7 +30,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        _loginViewModel = [LoginViewModel new];
+        _loginViewModel = [[LoginViewModel alloc] initWithAPIClient:[HelmetAPIClient new]];
     }
     return self;
 }

@@ -15,7 +15,7 @@
 #import "HelmetAPIClient.h"
 
 @interface LoginViewModel ()
-@property (strong, nonatomic) HelmetAPIClient *apiClient;
+@property (strong, nonatomic, readonly) HelmetAPIClient *apiClient;
 @end
 
 @implementation LoginViewModel
