@@ -198,9 +198,9 @@
 			productReference = 28678EA818A674E400A1960B /* Helmi.app */;
 			productType = "com.apple.product-type.application";
 		};
-		28678EC818A674E400A1960B /* HelmiTests */ = {
+		28678EC818A674E400A1960B /* UnitTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28678EDD18A674E400A1960B /* Build configuration list for PBXNativeTarget "HelmiTests" */;
+			buildConfigurationList = 28678EDD18A674E400A1960B /* Build configuration list for PBXNativeTarget "UnitTest" */;
 			buildPhases = (
 				28678EC518A674E400A1960B /* Sources */,
 				28678EC618A674E400A1960B /* Frameworks */,
@@ -211,7 +211,7 @@
 			dependencies = (
 				28678ECF18A674E400A1960B /* PBXTargetDependency */,
 			);
-			name = HelmiTests;
+			name = UnitTest;
 			productName = HelmiTests;
 			productReference = 28678EC918A674E400A1960B /* HelmiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -244,7 +244,7 @@
 			projectRoot = "";
 			targets = (
 				28678EA718A674E400A1960B /* Helmi */,
-				28678EC818A674E400A1960B /* HelmiTests */,
+				28678EC818A674E400A1960B /* UnitTest */,
 			);
 		};
 /* End PBXProject section */
@@ -529,7 +529,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		28678EDD18A674E400A1960B /* Build configuration list for PBXNativeTarget "HelmiTests" */ = {
+		28678EDD18A674E400A1960B /* Build configuration list for PBXNativeTarget "UnitTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28678EDE18A674E400A1960B /* Debug */,
