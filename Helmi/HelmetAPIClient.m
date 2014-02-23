@@ -21,19 +21,19 @@
 
 @implementation HelmetAPIClient
 
-- (void)SetUserName:(NSString *)userName andPassword:(NSString *)password
-{
-    _user = userName;
-    _password = password;
-}
-
 - (RACSignal *)executeLogIn:(NSString *)libraryCardNumber pinCode:(NSString *)pinCode
 {
-    [self SetUserName:libraryCardNumber andPassword:pinCode];
+    [self setUserName:libraryCardNumber andPassword:pinCode];
     
     RACSignal *login = [[self manager] rac_GET:[self loginUrl] parameters:nil];
     login = [[login logAll] replayLazily];
     return login;
+}
+
+- (void)setUserName:(NSString *)userName andPassword:(NSString *)password
+{
+    _user = userName;
+    _password = password;
 }
 
 - (NSString *)loginUrl
