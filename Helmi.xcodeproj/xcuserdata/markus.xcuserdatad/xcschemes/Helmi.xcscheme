@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "28678EC818A674E400A1960B"
-               BuildableName = "HelmiTests.xctest"
+               BuildableName = "UnitTest.xctest"
                BlueprintName = "UnitTest"
                ReferencedContainer = "container:Helmi.xcodeproj">
             </BuildableReference>
