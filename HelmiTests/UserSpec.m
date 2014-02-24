@@ -37,6 +37,10 @@ describe(@"User", ^{
     it(@"has correct email address", ^{
         [[[user emailAddress] should] equal:@"hello@example.com"];
     });
+    
+    it(@"has a personal name", ^{
+        [[[user personalName] should] equal:@"Korhonen, Teppo Tapani"];
+    });
 });
 
 SPEC_END
