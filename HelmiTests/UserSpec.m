@@ -35,7 +35,7 @@ describe(@"User", ^{
     });
     
     it(@"has correct email address", ^{
-        [[[user emailAddress] should] equal:@"markus.kauppila@gmail.com"];
+        [[[user emailAddress] should] equal:@"hello@example.com"];
     });
 });
 

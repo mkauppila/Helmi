@@ -1,0 +1,50 @@
+{
+  "patron identifier": "20000012225599",
+  "e-mail address": "hello@example.com",
+  "valid patron": true, 
+  "institution id": "helsp", 
+  "recall items count": 0, 
+  "hold items count": 0, 
+  "unavailable holds count": 0, 
+  "valid patron password": true, 
+  "charged items count": 8, 
+  "overdue items count": 5, 
+  "overdue items limit": 50, 
+  "hold items limit": 30, 
+  "transaction date": "2014-02-23T17:42:31", 
+  "language": {
+    "id": 0, 
+    "name": "Unknown (default)"
+  }, 
+  "items": {
+    "overdue items": [
+      "30049006632468", 
+      "30092017382228", 
+      "30092015855647", 
+      "30049017199820", 
+      "30091044275447"
+    ], 
+    "charged items": [
+      "30091035522658", 
+      "30049006632468", 
+      "30092015554703", 
+      "30092017382228", 
+      "30092015855647", 
+      "30049017199820", 
+      "30091044275447", 
+      "30092015881627"
+    ]
+  }, 
+  "patron status": [], 
+  "personal name": "Korhonen, Teppo Tapani",
+  "charged items limit": 40, 
+  "fee limit": [
+    999, 
+    2
+  ], 
+  "fine items count": 0, 
+  "fee amount": [
+    0, 
+    0
+  ]
+}
