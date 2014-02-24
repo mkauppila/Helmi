@@ -12,6 +12,7 @@
 		28462A6518B9EEC70011A14D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 28462A6418B9EEC70011A14D /* User.m */; };
 		28462A6618B9EEC70011A14D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 28462A6418B9EEC70011A14D /* User.m */; };
 		28462A6818BA4E840011A14D /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = 28462A6718BA4E840011A14D /* login.json */; };
+		28462A6C18BBB0F30011A14D /* LoanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28462A6B18BBB0F30011A14D /* LoanTableViewController.m */; };
 		28678EAC18A674E400A1960B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678EAB18A674E400A1960B /* Foundation.framework */; };
 		28678EAE18A674E400A1960B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678EAD18A674E400A1960B /* CoreGraphics.framework */; };
 		28678EB018A674E400A1960B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678EAF18A674E400A1960B /* UIKit.framework */; };
@@ -48,6 +49,8 @@
 		28462A6318B9EEC70011A14D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		28462A6418B9EEC70011A14D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		28462A6718BA4E840011A14D /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
+		28462A6A18BBB0F30011A14D /* LoanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanTableViewController.h; sourceTree = "<group>"; };
+		28462A6B18BBB0F30011A14D /* LoanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanTableViewController.m; sourceTree = "<group>"; };
 		28678EA818A674E400A1960B /* Helmi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helmi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28678EAB18A674E400A1960B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		28678EAD18A674E400A1960B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -157,6 +160,8 @@
 				28462A6018B7CC6F0011A14D /* HelmetAPIClient.m */,
 				28462A6318B9EEC70011A14D /* User.h */,
 				28462A6418B9EEC70011A14D /* User.m */,
+				28462A6A18BBB0F30011A14D /* LoanTableViewController.h */,
+				28462A6B18BBB0F30011A14D /* LoanTableViewController.m */,
 				28678EC318A674E400A1960B /* Images.xcassets */,
 				28678EB218A674E400A1960B /* Supporting Files */,
 			);
@@ -359,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28462A6118B7CC6F0011A14D /* HelmetAPIClient.m in Sources */,
+				28462A6C18BBB0F30011A14D /* LoanTableViewController.m in Sources */,
 				286C639D18ABEC6B005C84D5 /* LoginViewModel.m in Sources */,
 				28462A6518B9EEC70011A14D /* User.m in Sources */,
 				28678EC218A674E400A1960B /* LoginViewController.m in Sources */,
