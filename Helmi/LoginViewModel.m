@@ -13,6 +13,7 @@
 #import <AFHTTPRequestOperationManager+RACSupport.h>
 
 #import "HelmetAPIClient.h"
+#import "User.h"
 
 @interface LoginViewModel ()
 @property (strong, nonatomic, readonly) HelmetAPIClient *apiClient;
@@ -73,6 +74,10 @@
         @strongify(self);
         NSLog(@"first: %@", response.first);
         NSLog(@"second: %@", response.second);
+        
+        NSDictionary *userInfo = response.last;
+        self.currentUser = [[User alloc] initWithUserInfo:userInfo];
+        NSLog(@"user: %@", self.currentUser);
         
         self.didSucceedToLogin = YES;
     } error:^(NSError *error) {
