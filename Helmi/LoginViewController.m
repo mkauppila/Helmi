@@ -11,6 +11,8 @@
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
 
+#import "LoanTableViewController.h"
+
 #import "LoginViewModel.h"
 
 #import "HelmetAPIClient.h"
@@ -52,10 +54,15 @@
     [[[RACObserve(self.loginViewModel, didSucceedToLogin) distinctUntilChanged]
       filter:^BOOL(NSNumber *didSucceedToLogin) {
         return [didSucceedToLogin boolValue];
-    }] subscribeNext:^(id x) {
-        NSLog(@"-- go on, user did log in!");
+    }] subscribeNext:^(NSNumber *x) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"LoanTableViewControllerID"];
+        
+        [self.navigationController pushViewController:controller
+                                             animated:YES];
+        
     }];
-    
+
     self.logInButton.rac_command = [self.loginViewModel logInCommand];
 }
 
