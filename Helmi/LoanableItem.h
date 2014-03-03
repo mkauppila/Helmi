@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface LoanableItem : NSObject
+@property (nonatomic, copy, readonly) NSString *identifier;
 
+- (instancetype)initWithIdentifier:(NSString *)identifier;
 @end
