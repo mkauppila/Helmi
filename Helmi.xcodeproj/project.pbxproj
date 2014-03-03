@@ -31,6 +31,8 @@
 		286C639E18ABEC6B005C84D5 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C639C18ABEC6B005C84D5 /* LoginViewModel.m */; };
 		28C7629118C45BE500BF15C2 /* LoanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629018C45BE500BF15C2 /* LoanViewModel.m */; };
 		28C7629218C45BE500BF15C2 /* LoanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629018C45BE500BF15C2 /* LoanViewModel.m */; };
+		28C7629518C4610E00BF15C2 /* LoanTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629418C4610E00BF15C2 /* LoanTableDataSource.m */; };
+		28C7629618C4610E00BF15C2 /* LoanTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629418C4610E00BF15C2 /* LoanTableDataSource.m */; };
 		46C1A7019DA84C9FAE8A8816 /* libPods-UnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC661A8B3A7D440BA7BDC760 /* libPods-UnitTest.a */; };
 		6BD378717E874D7C972A7544 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 770592FAD1AC40BDA82AA1FA /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -76,6 +78,8 @@
 		286C639C18ABEC6B005C84D5 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		28C7628F18C45BE500BF15C2 /* LoanViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanViewModel.h; sourceTree = "<group>"; };
 		28C7629018C45BE500BF15C2 /* LoanViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanViewModel.m; sourceTree = "<group>"; };
+		28C7629318C4610E00BF15C2 /* LoanTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanTableDataSource.h; sourceTree = "<group>"; };
+		28C7629418C4610E00BF15C2 /* LoanTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanTableDataSource.m; sourceTree = "<group>"; };
 		5F48A13424EA4B539FFA98BD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		770592FAD1AC40BDA82AA1FA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC661A8B3A7D440BA7BDC760 /* libPods-UnitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +172,8 @@
 				28462A6B18BBB0F30011A14D /* LoanViewController.m */,
 				28C7628F18C45BE500BF15C2 /* LoanViewModel.h */,
 				28C7629018C45BE500BF15C2 /* LoanViewModel.m */,
+				28C7629318C4610E00BF15C2 /* LoanTableDataSource.h */,
+				28C7629418C4610E00BF15C2 /* LoanTableDataSource.m */,
 				28678EC318A674E400A1960B /* Images.xcassets */,
 				28678EB218A674E400A1960B /* Supporting Files */,
 			);
@@ -375,6 +381,7 @@
 				286C639D18ABEC6B005C84D5 /* LoginViewModel.m in Sources */,
 				28462A6518B9EEC70011A14D /* User.m in Sources */,
 				28678EC218A674E400A1960B /* LoginViewController.m in Sources */,
+				28C7629518C4610E00BF15C2 /* LoanTableDataSource.m in Sources */,
 				28678EBC18A674E400A1960B /* AppDelegate.m in Sources */,
 				28678EB818A674E400A1960B /* main.m in Sources */,
 			);
@@ -387,6 +394,7 @@
 				28C7629218C45BE500BF15C2 /* LoanViewModel.m in Sources */,
 				28462A6618B9EEC70011A14D /* User.m in Sources */,
 				286C639E18ABEC6B005C84D5 /* LoginViewModel.m in Sources */,
+				28C7629618C4610E00BF15C2 /* LoanTableDataSource.m in Sources */,
 				28462A6218B7CC6F0011A14D /* HelmetAPIClient.m in Sources */,
 				28678ED718A674E400A1960B /* UserSpec.m in Sources */,
 			);
