@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Markus Kauppila. All rights reserved.
 //
 
-#import "LoanTableViewController.h"
+#import "LoanViewController.h"
 
-@interface LoanTableViewController ()
+@interface LoanViewController ()
 
 @end
 
-@implementation LoanTableViewController
+@implementation LoanViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

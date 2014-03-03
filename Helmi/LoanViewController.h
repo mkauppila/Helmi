@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoanTableViewController : UITableViewController
+@interface LoanViewController : UITableViewController
 
 @end

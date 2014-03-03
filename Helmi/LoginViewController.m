@@ -11,7 +11,7 @@
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
 
-#import "LoanTableViewController.h"
+#import "LoanViewController.h"
 
 #import "LoginViewModel.h"
 

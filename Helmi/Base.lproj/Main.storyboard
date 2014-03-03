@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="438" y="138"/>
         </scene>
-        <!--Loan Table View Controller-->
+        <!--Loan View Controller-->
         <scene sceneID="hiA-lw-2Zw">
             <objects>
-                <tableViewController storyboardIdentifier="LoanTableViewControllerID" id="Fj5-U4-fWN" customClass="LoanTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LoanTableViewControllerID" id="Fj5-U4-fWN" customClass="LoanViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6kX-Sf-7u1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
