@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoanViewController : UITableViewController
+@class User;
 
+@interface LoanViewController : UITableViewController
+@property (strong, nonatomic) User *currentUser;
 @end

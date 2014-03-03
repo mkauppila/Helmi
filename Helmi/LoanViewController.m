@@ -28,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.loanViewModel setCurrentUser:self.currentUser];
 }
 
 @end

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LoanViewModel : NSObject
+@class User;
 
+@interface LoanViewModel : NSObject
+@property (strong, nonatomic) User *currentUser;
 @end

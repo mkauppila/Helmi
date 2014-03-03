@@ -14,7 +14,6 @@
 #import "LoanViewController.h"
 
 #import "LoginViewModel.h"
-
 #import "HelmetAPIClient.h"
 
 @interface LoginViewController ()
@@ -56,7 +55,8 @@
         return [didSucceedToLogin boolValue];
     }] subscribeNext:^(NSNumber *x) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"LoanTableViewControllerID"];
+        LoanViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"LoanTableViewControllerID"];
+        [controller setCurrentUser:[self.loginViewModel currentUser]];
         
         [self.navigationController pushViewController:controller
                                              animated:YES];
