@@ -13,7 +13,9 @@
 #import <AFHTTPRequestOperationManager+RACSupport.h>
 
 #import "HelmetAPIClient.h"
+
 #import "User.h"
+#import "LoanableItem.h"
 
 @interface LoginViewModel ()
 @property (strong, nonatomic, readonly) HelmetAPIClient *apiClient;
@@ -76,6 +78,9 @@
         NSLog(@"second: %@", response.second);
         
         NSDictionary *userInfo = response.last;
+        
+        NSArray *loanableItems = [self createLoanableItems:userInfo];
+        
         self.currentUser = [[User alloc] initWithUserInfo:userInfo];
         NSLog(@"user: %@", self.currentUser);
         
@@ -85,6 +90,21 @@
     }];
     
     return s;
+}
+
+- (NSArray *)createLoanableItems:(NSDictionary *)userInfo
+{
+    NSDictionary *allItems = userInfo[@"items"];
+    NSMutableArray *identifiers = [NSMutableArray array];
+    [identifiers addObjectsFromArray:allItems[@"charged items"]];
+    [identifiers addObjectsFromArray:allItems[@"overdue items"]];
+
+    NSMutableArray *items = [NSMutableArray array];
+    [identifiers enumerateObjectsUsingBlock:^(NSString *identifier, NSUInteger idx, BOOL *stop) {
+        [items addObject:[[LoanableItem alloc] initWithIdentifier:identifier]];
+    }];
+    
+    return items;
 }
 
 @end
