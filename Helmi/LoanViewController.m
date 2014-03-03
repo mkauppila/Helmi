@@ -11,6 +11,9 @@
 #import "LoanViewModel.h"
 #import "LoanTableDataSource.h"
 
+#import "LoanableItem.h"
+#import "User.h"
+
 @interface LoanViewController ()
 @property (strong, nonatomic) LoanViewModel *loanViewModel;
 @property (strong, nonatomic) LoanTableDataSource *tableDataSource;
@@ -33,13 +36,13 @@
     
     [self.loanViewModel setCurrentUser:self.currentUser];
     
-    NSArray *items = @[@"aa", @"bb", @"cc"];
+    //NSArray *items = @[@"aa", @"bb", @"cc"];
     NSString *const reuseId = @"LoanCellReuseIdentifier";
-    void (^cellConfigurator)(id, id) = ^(UITableViewCell *cell, NSString *item) {
-        cell.textLabel.text = item;
+    void (^cellConfigurator)(id, id) = ^(UITableViewCell *cell, LoanableItem *item) {
+        cell.textLabel.text = [item identifier];
     };
     
-    self.tableDataSource = [[LoanTableDataSource alloc] initWithItems:items
+    self.tableDataSource = [[LoanTableDataSource alloc] initWithItems:[self.currentUser loanableItems]
                                                       reuseIdentifier:reuseId
                                                cellConfigurationBlock:cellConfigurator];
     
