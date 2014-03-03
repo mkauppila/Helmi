@@ -19,14 +19,6 @@
         _emailAddress = userInfo[@"e-mail address"];
         
         _loanableItems = loanableItems;
-        /*
-        NSDictionary *allItems = userInfo[@"items"];
-        _loans = allItems[@"charged items"];
-        _overdueLoans = allItems[@"overdue items"];
-        */
-        
-        //_loansCount = [_loans count];
-        //_overdueLoansCount = [_overdueLoans count];
     }
     return self;
 }
