@@ -12,6 +12,8 @@
 #import <libextobjc/EXTScope.h>
 #import <AFHTTPRequestOperationManager+RACSupport.h>
 
+#import "LoanableItem.h"
+
 @interface HelmetAPIClient () {
     AFHTTPRequestOperationManager *_manager;
 }
@@ -42,6 +44,20 @@
             self.user];
 }
 
+- (RACSignal *)fetchInformationForLoanableItem:(LoanableItem *)item
+{
+    RACSignal *fetch = [[self manager] rac_GET:[self itemInformationUrlForItem:[item identifier]]
+                                    parameters:nil];
+    fetch = [[fetch logAll] replayLazily];
+    return fetch;
+}
+
+- (NSString *)itemInformationUrlForItem:(NSString *)itemIdentifier
+{
+    return [NSString stringWithFormat:@"https://lainakortti.helmet-kirjasto.fi/item/%@",
+            itemIdentifier];
+}
+
 - (AFHTTPRequestOperationManager *)manager
 {
     if (_manager == nil) {
@@ -50,7 +66,7 @@
         
         [_manager setRequestSerializer:[AFHTTPRequestSerializer serializer]];
         [[_manager requestSerializer] setAuthorizationHeaderFieldWithUsername:self.user
-                                                                    password:self.password];
+                                                                     password:self.password];
 
     }
     return _manager;

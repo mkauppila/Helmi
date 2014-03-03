@@ -10,8 +10,12 @@
 
 @class RACSignal;
 
+@class LoanableItem;
+
 @interface HelmetAPIClient : NSObject
 
 - (RACSignal *)executeLogIn:(NSString *)libraryCardNumber pinCode:(NSString *)pinCode;
+
+- (RACSignal *)fetchInformationForLoanableItem:(LoanableItem *)item;
 
 @end

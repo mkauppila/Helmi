@@ -80,7 +80,7 @@
         NSDictionary *userInfo = response.last;
         
         NSArray *loanableItems = [self createLoanableItems:userInfo];
-        
+        [self fetchInformationForLoanableItems:loanableItems];
         
         self.currentUser = [[User alloc] initWithUserInfo:userInfo
                                          andLoanableItems:loanableItems];
@@ -107,6 +107,20 @@
     }];
     
     return items;
+}
+
+- (void)fetchInformationForLoanableItems:(NSArray *)loanableItems
+{
+    [loanableItems enumerateObjectsUsingBlock:^(LoanableItem *item, NSUInteger idx, BOOL *stop) {
+        RACSignal *fetch = [self.apiClient fetchInformationForLoanableItem:item];
+        
+        [fetch subscribeNext:^(RACTuple *response) {
+            NSLog(@"fill item: %@", [item identifier]);
+            NSLog(@"with: %@", response.second);
+        } error:^(NSError *error) {
+            NSLog(@"failed to fetch information for item: %@", [item identifier]);
+        }];
+    }];
 }
 
 @end
