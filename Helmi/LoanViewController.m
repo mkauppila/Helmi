@@ -8,11 +8,22 @@
 
 #import "LoanViewController.h"
 
-@interface LoanViewController ()
+#import "LoanViewModel.h"
 
+@interface LoanViewController ()
+@property (strong, nonatomic) LoanViewModel *loanViewModel;
 @end
 
 @implementation LoanViewController
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        _loanViewModel = [LoanViewModel new];
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
