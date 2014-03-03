@@ -81,7 +81,9 @@
         
         NSArray *loanableItems = [self createLoanableItems:userInfo];
         
-        self.currentUser = [[User alloc] initWithUserInfo:userInfo];
+        
+        self.currentUser = [[User alloc] initWithUserInfo:userInfo
+                                         andLoanableItems:loanableItems];
         NSLog(@"user: %@", self.currentUser);
         
         self.didSucceedToLogin = YES;
