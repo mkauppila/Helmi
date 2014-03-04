@@ -1,26 +1,27 @@
 {
-  "transaction date": "2014-03-04T09:53:44", 
+  "transaction date": "2014-03-04T10:10:28", 
+  "due date": "2014-03-26T00:00:00", 
   "media type": {
-    "id": 0, 
-    "name": "other"
+    "id": 1, 
+    "name": "book"
   }, 
   "security marker": {
     "id": 0, 
     "name": "other"
   }, 
-  "title identifier": "No Title", 
+  "title identifier": "Dune Messiah / Frank Herbert", 
   "fee type": {
     "id": 1, 
     "name": "other/unknown"
   }, 
-  "permanent location": "", 
+  "permanent location": "e01al", 
   "item properties": "", 
   "screen message": "", 
   "owner": "", 
   "circulation status": {
-    "id": 1, 
-    "name": "other"
+    "id": 4, 
+    "name": "charged"
   }, 
   "hold queue length": 0, 
-  "item identifier": "30049006632468ls"
+  "item identifier": "30049006632468"
 }
