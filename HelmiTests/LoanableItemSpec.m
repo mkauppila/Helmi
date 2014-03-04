@@ -10,8 +10,24 @@
 
 #import "SpecHelper.h"
 
+#import "LoanableItem.h"
+
 SPEC_BEGIN(LoanableItemSpec)
 
-
+describe(@"Loanble item", ^{
+    __block LoanableItem *item = nil;
+    
+    beforeEach(^{
+        item = [[LoanableItem alloc] initWithIdentifier:@"123456"];
+    });
+    
+    afterEach(^{
+        item = nil;
+    });
+    
+    it(@"it needs to have identifier", ^{
+        [[[item identifier] should] beNonNil];
+    });
+});
 
 SPEC_END
