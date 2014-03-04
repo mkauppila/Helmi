@@ -8,17 +8,9 @@
 
 #import <Kiwi.h>
 
-#import "User.h"
+#import "SpecHelper.h"
 
-NSDictionary *LoadTestData(NSString *fileName)
-{
-    NSString *pathToTestData = [[NSBundle bundleWithIdentifier:@"UnitTest"]
-                                pathForResource:fileName ofType:@"json"];
-    NSData *jsonData = [NSData dataWithContentsOfFile:pathToTestData];
-    return [NSJSONSerialization JSONObjectWithData:jsonData
-                                           options:kNilOptions
-                                             error:NULL];
-}
+#import "User.h"
 
 SPEC_BEGIN(UserSpec)
 
