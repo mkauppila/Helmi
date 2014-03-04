@@ -11,6 +11,7 @@
 #import "SpecHelper.h"
 
 #import "User.h"
+#import "LoanableItem.h"
 
 SPEC_BEGIN(UserSpec)
 
@@ -19,7 +20,8 @@ describe(@"User", ^{
     
     beforeEach(^{
         NSDictionary *userInfo = LoadTestData(@"login");
-        user = [[User alloc] initWithUserInfo:userInfo];
+        LoanableItem *item = [[LoanableItem alloc] initWithIdentifier:@"aa"];
+        user = [[User alloc] initWithUserInfo:userInfo andLoanableItems:@[item]];
     });
     
     afterEach(^{
