@@ -11,5 +11,16 @@
 @interface LoanableItem : NSObject
 @property (nonatomic, copy, readonly) NSString *identifier;
 
+@property (nonatomic, copy, readonly) NSString *title;
+@property (nonatomic, copy, readonly) NSString *circulationStatus;
+@property (nonatomic, strong, readonly) NSDate *dueDate;
+
+@property (nonatomic, copy, readonly) NSString *authorFirstName;
+@property (nonatomic, copy, readonly) NSString *authorLastName;
+
+@property (nonatomic, assign, readonly) BOOL isOverdue;
+
 - (instancetype)initWithIdentifier:(NSString *)identifier;
+
+- (void)loadInformationFrom:(NSDictionary *)itemInfo;
 @end

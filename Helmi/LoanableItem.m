@@ -22,5 +22,8 @@
     return self;
 }
 
+- (void)loadInformationFrom:(NSDictionary *)itemInfo
+{
+}
 
 @end
