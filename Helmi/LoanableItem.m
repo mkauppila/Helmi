@@ -24,6 +24,15 @@
 
 - (void)loadInformationFrom:(NSDictionary *)itemInfo
 {
+    _dueDate = [self parseDueDateFrom:itemInfo[@"due date"]];
 }
+
+- (NSDate *)parseDueDateFrom:(NSString *)dateString
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+    return [formatter dateFromString:dateString];
+}
+
 
 @end
