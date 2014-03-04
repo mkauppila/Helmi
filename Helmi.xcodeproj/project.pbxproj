@@ -36,6 +36,7 @@
 		28C7629918C4ABB100BF15C2 /* LoanableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629818C4ABB100BF15C2 /* LoanableItem.m */; };
 		28C7629A18C4ABB100BF15C2 /* LoanableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629818C4ABB100BF15C2 /* LoanableItem.m */; };
 		28C7629E18C5B87000BF15C2 /* SpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629C18C5B87000BF15C2 /* SpecHelper.m */; };
+		28C762A118C5BE2C00BF15C2 /* LoanableItemSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C762A018C5BE2C00BF15C2 /* LoanableItemSpec.m */; };
 		46C1A7019DA84C9FAE8A8816 /* libPods-UnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC661A8B3A7D440BA7BDC760 /* libPods-UnitTest.a */; };
 		6BD378717E874D7C972A7544 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 770592FAD1AC40BDA82AA1FA /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		28C7629818C4ABB100BF15C2 /* LoanableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanableItem.m; sourceTree = "<group>"; };
 		28C7629B18C5B87000BF15C2 /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
 		28C7629C18C5B87000BF15C2 /* SpecHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecHelper.m; sourceTree = "<group>"; };
+		28C762A018C5BE2C00BF15C2 /* LoanableItemSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanableItemSpec.m; sourceTree = "<group>"; };
 		5F48A13424EA4B539FFA98BD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		770592FAD1AC40BDA82AA1FA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC661A8B3A7D440BA7BDC760 /* libPods-UnitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +207,7 @@
 			children = (
 				28462A6918BA4E8C0011A14D /* Test data */,
 				28678ED618A674E400A1960B /* UserSpec.m */,
+				28C762A018C5BE2C00BF15C2 /* LoanableItemSpec.m */,
 				28678ED118A674E400A1960B /* Supporting Files */,
 				28C7629B18C5B87000BF15C2 /* SpecHelper.h */,
 				28C7629C18C5B87000BF15C2 /* SpecHelper.m */,
@@ -407,6 +410,7 @@
 				28462A6618B9EEC70011A14D /* User.m in Sources */,
 				28C7629E18C5B87000BF15C2 /* SpecHelper.m in Sources */,
 				286C639E18ABEC6B005C84D5 /* LoginViewModel.m in Sources */,
+				28C762A118C5BE2C00BF15C2 /* LoanableItemSpec.m in Sources */,
 				28C7629618C4610E00BF15C2 /* LoanTableDataSource.m in Sources */,
 				28462A6218B7CC6F0011A14D /* HelmetAPIClient.m in Sources */,
 				28C7629A18C4ABB100BF15C2 /* LoanableItem.m in Sources */,
