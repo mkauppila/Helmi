@@ -19,7 +19,7 @@ describe(@"Loanble item", ^{
     
     beforeEach(^{
         item = [[LoanableItem alloc] initWithIdentifier:@"123456"];
-        NSDictionary *itemInfo = LoadTestData(@"item.json");
+        NSDictionary *itemInfo = LoadTestData(@"item");
 
         [item loadInformationFrom:itemInfo];
     });
