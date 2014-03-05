@@ -25,6 +25,13 @@
 - (void)loadInformationFrom:(NSDictionary *)itemInfo
 {
     _dueDate = [self parseDueDateFrom:itemInfo[@"due date"]];
+    _title = [self parseBookTitle:itemInfo[@"title identifier"]];
+}
+
+- (NSString *)parseBookTitle:(NSString *)fullTitle
+{
+    NSArray *components = [fullTitle componentsSeparatedByString:@"/"];
+    return [[components firstObject] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
 - (NSDate *)parseDueDateFrom:(NSString *)dateString
