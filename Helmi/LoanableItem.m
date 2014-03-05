@@ -25,7 +25,17 @@
 - (void)loadInformationFrom:(NSDictionary *)itemInfo
 {
     _dueDate = [self parseDueDateFrom:itemInfo[@"due date"]];
+    
     _title = [self parseBookTitle:itemInfo[@"title identifier"]];
+    _authorFirstName = [self parseAuthorFirstName:itemInfo[@"title identifier"]];
+    _authorLastName = [self parseAuthorLastName:itemInfo[@"title identifier"]];
+}
+
+- (NSDate *)parseDueDateFrom:(NSString *)dateString
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+    return [formatter dateFromString:dateString];
 }
 
 - (NSString *)parseBookTitle:(NSString *)fullTitle
@@ -34,11 +44,24 @@
     return [[components firstObject] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-- (NSDate *)parseDueDateFrom:(NSString *)dateString
+- (NSString *)parseAuthorFirstName:(NSString *)fullTitle
 {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
-    return [formatter dateFromString:dateString];
+    NSArray *components = [fullTitle componentsSeparatedByString:@"/"];
+    
+    NSString *fullNameString = [[components lastObject] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSArray *nameParts = [fullNameString componentsSeparatedByString:@" "];
+    
+    return [nameParts firstObject];
+}
+
+- (NSString *)parseAuthorLastName:(NSString *)fullTitle
+{
+    NSArray *components = [fullTitle componentsSeparatedByString:@"/"];
+    
+    NSString *fullNameString = [[components lastObject] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSArray *nameParts = [fullNameString componentsSeparatedByString:@" "];
+    
+    return [nameParts lastObject];
 }
 
 
