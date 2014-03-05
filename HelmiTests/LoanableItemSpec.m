@@ -43,7 +43,7 @@ describe(@"Loanble item", ^{
     
     it(@"is authored by Frank Herbert", ^{
         [[[item authorFirstName] should] equal:@"Frank"];
-        [[[item authorFirstName] should] equal:@"Herbert"];
+        [[[item authorLastName] should] equal:@"Herbert"];
     });
     
     it(@"has title 'Dune Messiah'", ^{
