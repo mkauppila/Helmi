@@ -29,7 +29,8 @@
     _title = [self parseBookTitle:itemInfo[@"title identifier"]];
     _authorFirstName = [self parseAuthorFirstName:itemInfo[@"title identifier"]];
     _authorLastName = [self parseAuthorLastName:itemInfo[@"title identifier"]];
-}
+    _circulationStatus = [self parseCirculationStatus:itemInfo[@"circulation status"]];
+} 
 
 - (NSDate *)parseDueDateFrom:(NSString *)dateString
 {
@@ -64,5 +65,9 @@
     return [nameParts lastObject];
 }
 
+- (NSString *)parseCirculationStatus:(NSDictionary *)circulationInfo
+{
+    return circulationInfo[@"name"];
+}
 
 @end
