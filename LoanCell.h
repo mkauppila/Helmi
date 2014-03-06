@@ -10,6 +10,10 @@
 
 @class  RACDisposable;
 
+@class  LoanableItem;
+
 @interface LoanCell : UITableViewCell
 @property (nonatomic, strong) RACDisposable *update;
+
+- (void)setLoanableItem:(LoanableItem *)item;
 @end

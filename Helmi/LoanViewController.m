@@ -8,8 +8,12 @@
 
 #import "LoanViewController.h"
 
+#import <ReactiveCocoa.h>
+#import <libextobjc/EXTScope.h>
+
 #import "LoanViewModel.h"
 #import "LoanTableDataSource.h"
+#import "LoanCell.h"
 
 #import "LoanableItem.h"
 #import "User.h"
@@ -36,10 +40,10 @@
     
     [self.loanViewModel setCurrentUser:self.currentUser];
     
-    //NSArray *items = @[@"aa", @"bb", @"cc"];
+    
     NSString *const reuseId = @"LoanCellReuseIdentifier";
-    void (^cellConfigurator)(id, id) = ^(UITableViewCell *cell, LoanableItem *item) {
-        cell.textLabel.text = [item identifier];
+    void (^cellConfigurator)(LoanCell *, LoanableItem *) = ^(LoanCell *cell, LoanableItem *item) {
+        [cell setLoanableItem:item];
     };
     
     self.tableDataSource = [[LoanTableDataSource alloc] initWithItems:[self.currentUser loanableItems]

@@ -11,6 +11,10 @@
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
 
+#import "LoanableItem.h"
+
+
+
 @implementation LoanCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -26,6 +30,9 @@
     [super setSelected:selected animated:animated];
 }
 
-
+- (void)setLoanableItem:(LoanableItem *)item
+{
+    
+}
 
 @end
