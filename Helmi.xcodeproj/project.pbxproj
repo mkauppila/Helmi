@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2832BCE818C8F4AE0067FBA3 /* LoanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832BCE718C8F4AE0067FBA3 /* LoanCell.m */; };
 		28462A6118B7CC6F0011A14D /* HelmetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 28462A6018B7CC6F0011A14D /* HelmetAPIClient.m */; };
 		28462A6218B7CC6F0011A14D /* HelmetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 28462A6018B7CC6F0011A14D /* HelmetAPIClient.m */; };
 		28462A6518B9EEC70011A14D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 28462A6418B9EEC70011A14D /* User.m */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2832BCE618C8F4AE0067FBA3 /* LoanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoanCell.h; path = ../LoanCell.h; sourceTree = "<group>"; };
+		2832BCE718C8F4AE0067FBA3 /* LoanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanCell.m; path = ../LoanCell.m; sourceTree = "<group>"; };
 		28462A5F18B7CC6F0011A14D /* HelmetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelmetAPIClient.h; sourceTree = "<group>"; };
 		28462A6018B7CC6F0011A14D /* HelmetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelmetAPIClient.m; sourceTree = "<group>"; };
 		28462A6318B9EEC70011A14D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 				28678EB218A674E400A1960B /* Supporting Files */,
 				28C7629718C4ABB100BF15C2 /* LoanableItem.h */,
 				28C7629818C4ABB100BF15C2 /* LoanableItem.m */,
+				2832BCE618C8F4AE0067FBA3 /* LoanCell.h */,
+				2832BCE718C8F4AE0067FBA3 /* LoanCell.m */,
 			);
 			path = Helmi;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2832BCE818C8F4AE0067FBA3 /* LoanCell.m in Sources */,
 				28C7629118C45BE500BF15C2 /* LoanViewModel.m in Sources */,
 				28462A6118B7CC6F0011A14D /* HelmetAPIClient.m in Sources */,
 				28462A6C18BBB0F30011A14D /* LoanViewController.m in Sources */,
