@@ -10,7 +10,6 @@
 
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
-#import <AFHTTPRequestOperationManager+RACSupport.h>
 
 #import "HelmetAPIClient.h"
 
