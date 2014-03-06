@@ -9,6 +9,14 @@
 #import "LoanableItem.h"
 
 @interface LoanableItem ()
+@property (nonatomic, copy) NSString *identifier;
+
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *circulationStatus;
+@property (nonatomic, strong) NSDate *dueDate;
+
+@property (nonatomic, copy) NSString *authorFirstName;
+@property (nonatomic, copy) NSString *authorLastName;
 @end
 
 @implementation LoanableItem
@@ -24,13 +32,13 @@
 
 - (void)loadInformationFrom:(NSDictionary *)itemInfo
 {
-    _dueDate = [self parseDueDateFrom:itemInfo[@"due date"]];
+    self.title = [self parseBookTitle:itemInfo[@"title identifier"]];
+    self.circulationStatus = [self parseCirculationStatus:itemInfo[@"circulation status"]];
+    self.dueDate = [self parseDueDateFrom:itemInfo[@"due date"]];
     
-    _title = [self parseBookTitle:itemInfo[@"title identifier"]];
-    _authorFirstName = [self parseAuthorFirstName:itemInfo[@"title identifier"]];
-    _authorLastName = [self parseAuthorLastName:itemInfo[@"title identifier"]];
-    _circulationStatus = [self parseCirculationStatus:itemInfo[@"circulation status"]];
-} 
+    self.authorFirstName = [self parseAuthorFirstName:itemInfo[@"title identifier"]];
+    self.authorLastName = [self parseAuthorLastName:itemInfo[@"title identifier"]];
+}
 
 - (NSDate *)parseDueDateFrom:(NSString *)dateString
 {
