@@ -10,4 +10,13 @@
 
 @implementation LoanViewModel
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _title = NSLocalizedString(@"Lainat", nil);
+    }
+    return self;
+}
+
 @end

@@ -12,4 +12,5 @@
 
 @interface LoanViewModel : NSObject
 @property (strong, nonatomic) User *currentUser;
+@property (strong, nonatomic) NSString *title;
 @end
