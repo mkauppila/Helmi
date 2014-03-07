@@ -40,6 +40,7 @@
     
     [self.loanViewModel setCurrentUser:self.currentUser];
     
+    RAC(self, title) = RACObserve(self.loanViewModel, title);
     
     NSString *const reuseId = @"LoanCellReuseIdentifier";
     void (^cellConfigurator)(LoanCell *, LoanableItem *) = ^(LoanCell *cell, LoanableItem *item) {
