@@ -13,8 +13,6 @@
 
 #import "LoanableItem.h"
 
-
-
 @implementation LoanCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -25,14 +23,13 @@
     return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-}
-
 - (void)setLoanableItem:(LoanableItem *)item
 {
-    
+    @weakify(self)
+    [[RACObserve(item, title) ignore:nil] subscribeNext:^(NSString *title) {
+        @strongify(self);
+        self.titleLabel.text = title;
+    }];
 }
 
 @end
