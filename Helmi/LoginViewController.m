@@ -50,10 +50,12 @@
     
     RAC(self.loginErrorLabel, text) = RACObserve(self.loginViewModel, loginErrorMessage);
     
+    @weakify(self);
     [[[RACObserve(self.loginViewModel, didSucceedToLogin) distinctUntilChanged]
       filter:^BOOL(NSNumber *didSucceedToLogin) {
         return [didSucceedToLogin boolValue];
     }] subscribeNext:^(NSNumber *x) {
+        @strongify(self);
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         LoanViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"LoanTableViewControllerID"];
         [controller setCurrentUser:[self.loginViewModel currentUser]];
