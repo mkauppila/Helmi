@@ -89,7 +89,7 @@
     } error:^(NSError *error) {
         NSLog(@"network error: %@", error);
     }];
-    
+
     return s;
 }
 
@@ -116,6 +116,8 @@
         [fetch subscribeNext:^(RACTuple *response) {
             NSLog(@"fill item: %@", [item identifier]);
             NSLog(@"with: %@", response.second);
+            
+            [item loadInformationFrom:response.second];
         } error:^(NSError *error) {
             NSLog(@"failed to fetch information for item: %@", [item identifier]);
         }];
