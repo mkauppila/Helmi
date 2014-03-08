@@ -18,10 +18,15 @@
 - (RACCommand *)renewItemCommand
 {
     RACCommand *renewItem = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        return nil;
+        return [self renewItem];
     }];
     
     return renewItem;
+}
+
+- (RACSignal *)renewItem
+{
+    return [RACSignal empty];
 }
 
 @end
