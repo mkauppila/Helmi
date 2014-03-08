@@ -43,6 +43,13 @@
     [self bindWithViewModel];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.loginViewModel initializeForLogin];
+}
+
 - (void)bindWithViewModel
 {
     RAC(self.loginViewModel, libraryCardNumber) = self.cardNumberTextField.rac_textSignal;

@@ -26,6 +26,8 @@
 
 - (instancetype)initWithAPIClient:(HelmetAPIClient *)apiClient;
 
+- (void)initializeForLogin;
+
 - (RACCommand *)logInCommand;
 
 - (RACSignal *)initiateLogIn;

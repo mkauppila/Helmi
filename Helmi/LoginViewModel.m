@@ -31,6 +31,11 @@
     return self;
 }
 
+- (void)initializeForLogin
+{
+    self.didSucceedToLogin = NO;
+    self.loginErrorMessage = @"";
+}
 
 - (RACCommand *)logInCommand
 {
