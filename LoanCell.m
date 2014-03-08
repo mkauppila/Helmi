@@ -25,6 +25,8 @@
 
 - (void)setLoanableItem:(LoanableItem *)item
 {
+    _loanableItem = item;
+    
     @weakify(self)
     [[RACObserve(item, title) ignore:nil] subscribeNext:^(NSString *title) {
         @strongify(self);
