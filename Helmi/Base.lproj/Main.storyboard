@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="830" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--Loan Detail View Controller-->
         <scene sceneID="Prf-j0-1hi">
             <objects>
-                <viewController id="8fu-Cg-VFU" sceneMemberID="viewController">
+                <viewController id="8fu-Cg-VFU" customClass="LoanDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MRq-c9-KGR"/>
                         <viewControllerLayoutGuide type="bottom" id="oW8-Zu-dzc"/>
