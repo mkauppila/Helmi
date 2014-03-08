@@ -8,10 +8,15 @@
 
 #import "LoanDetailViewController.h"
 
+#import <ReactiveCocoa.h>
+#import <libextobjc/EXTScope.h>
+
 #import "LoanDetailViewModel.h"
 #import "LoanableItem.h"
 
 @interface LoanDetailViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *renewButton;
+
 @property (nonatomic, strong) LoanDetailViewModel *detailViewModel;
 @end
 
@@ -30,9 +35,19 @@
 {
     [super viewDidLoad];
     
+    [self setUpViewModel];
+    [self bindWithViewModel];
+}
+
+- (void)setUpViewModel
+{
     [self.detailViewModel setItem:self.loanableItem];
-    
-    self.title = [self.loanableItem title];
+}
+
+- (void)bindWithViewModel
+{
+    self.renewButton.rac_command = [self.detailViewModel renewItemCommand];
+    RAC(self, title) = RACObserve(self.detailViewModel, item.title);
 }
 
 @end
