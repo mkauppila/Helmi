@@ -19,7 +19,7 @@
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super init];
+    self = [super initWithCoder:aDecoder];
     if (self) {
         _detailViewModel = [LoanDetailViewModel new];
     }
