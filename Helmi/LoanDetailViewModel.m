@@ -8,8 +8,20 @@
 
 #import "LoanDetailViewModel.h"
 
+#import <ReactiveCocoa.h>
+#import <libextobjc/EXTScope.h>
+
 #import "LoanableItem.h"
 
 @implementation LoanDetailViewModel
+
+- (RACCommand *)renewItemCommand
+{
+    RACCommand *renewItem = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        return nil;
+    }];
+    
+    return renewItem;
+}
 
 @end

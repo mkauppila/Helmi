@@ -10,6 +10,10 @@
 
 @class LoanableItem;
 
+@class RACCommand;
+
 @interface LoanDetailViewModel : NSObject
 @property (nonatomic, strong) LoanableItem *item;
+
+- (RACCommand *)renewItemCommand;
 @end
