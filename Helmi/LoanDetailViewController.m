@@ -8,6 +8,8 @@
 
 #import "LoanDetailViewController.h"
 
+#import "LoanableItem.h"
+
 @interface LoanDetailViewController ()
 
 @end
@@ -27,6 +29,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.title = [self.loanableItem title];
 }
 
 - (void)didReceiveMemoryWarning
