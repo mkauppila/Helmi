@@ -13,7 +13,6 @@
 @class  LoanableItem;
 
 @interface LoanCell : UITableViewCell
-@property (nonatomic, strong) RACDisposable *update;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 - (void)setLoanableItem:(LoanableItem *)item;
