@@ -85,6 +85,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="titleLabel" destination="2Hr-GB-Jyc" id="1g1-v9-VTE"/>
+                                    <segue destination="8fu-Cg-VFU" kind="push" identifier="OpenLoanSegue" id="OLS-t9-Et2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -98,6 +99,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="46a-XK-etk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="830" y="138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Prf-j0-1hi">
+            <objects>
+                <viewController id="8fu-Cg-VFU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MRq-c9-KGR"/>
+                        <viewControllerLayoutGuide type="bottom" id="oW8-Zu-dzc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dcl-k8-khg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uTe-aD-W5D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J8S-Lw-9GT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="-449"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rzf-gh-Y2T">
