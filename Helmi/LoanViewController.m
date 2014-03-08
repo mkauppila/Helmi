@@ -54,4 +54,13 @@
     self.tableView.dataSource = self.tableDataSource;
 }
 
+#pragma mark - Prepare for segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"OpenLoanSegue"]) {
+        NSLog(@"here");
+    }
+}
+
 @end
