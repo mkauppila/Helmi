@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LoanDetailViewModel : NSObject
+@class LoanableItem;
 
+@interface LoanDetailViewModel : NSObject
+@property (nonatomic, strong) LoanableItem *item;
 @end

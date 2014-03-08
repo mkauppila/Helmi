@@ -8,6 +8,8 @@
 
 #import "LoanDetailViewModel.h"
 
+#import "LoanableItem.h"
+
 @implementation LoanDetailViewModel
 
 @end
