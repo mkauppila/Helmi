@@ -18,4 +18,6 @@
 
 - (RACSignal *)fetchInformationForLoanableItem:(LoanableItem *)item;
 
+- (RACSignal *)renewLoan:(LoanableItem *)item;
+
 @end

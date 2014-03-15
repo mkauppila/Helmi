@@ -58,6 +58,20 @@
             itemIdentifier];
 }
 
+- (RACSignal *)renewLoan:(LoanableItem *)item
+{
+    RACSignal *renew = [[self manager] rac_POST:[self urlForRenewingLoan:[item identifier]] parameters:nil];
+    
+    [renew logAll];
+    
+    return [renew replayLazily];
+}
+
+- (NSString *)urlForRenewingLoan:(NSString *)identifier
+{
+    return [NSString stringWithFormat:@"https://lainakortti.helmet-kirjasto.fi/patron/%@/loan?item=%@", self.user, identifier];
+}
+
 - (AFHTTPRequestOperationManager *)manager
 {
     if (_manager == nil) {
