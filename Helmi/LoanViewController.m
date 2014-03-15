@@ -40,7 +40,7 @@
 {
     [super viewDidLoad];
     
-    [self.loanViewModel setCurrentUser:self.currentUser];
+    [self setUpViewModel];
     
     RAC(self, title) = RACObserve(self.loanViewModel, title);
     
@@ -54,6 +54,11 @@
                                                cellConfigurationBlock:cellConfigurator];
     
     self.tableView.dataSource = self.tableDataSource;
+}
+
+- (void)setUpViewModel
+{
+    [self.loanViewModel setCurrentUser:self.currentUser];
 }
 
 #pragma mark - Prepare for segue
