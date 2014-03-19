@@ -182,30 +182,12 @@
 				28678EBA18A674E400A1960B /* AppDelegate.h */,
 				28678EBB18A674E400A1960B /* AppDelegate.m */,
 				28678EBD18A674E400A1960B /* Main.storyboard */,
-				28678EC018A674E400A1960B /* LoginViewController.h */,
-				28678EC118A674E400A1960B /* LoginViewController.m */,
-				286C639B18ABEC6B005C84D5 /* LoginViewModel.h */,
-				286C639C18ABEC6B005C84D5 /* LoginViewModel.m */,
-				28462A5F18B7CC6F0011A14D /* HelmetAPIClient.h */,
-				28462A6018B7CC6F0011A14D /* HelmetAPIClient.m */,
-				28462A6318B9EEC70011A14D /* User.h */,
-				28462A6418B9EEC70011A14D /* User.m */,
-				28462A6A18BBB0F30011A14D /* LoanViewController.h */,
-				28462A6B18BBB0F30011A14D /* LoanViewController.m */,
-				28C7628F18C45BE500BF15C2 /* LoanViewModel.h */,
-				28C7629018C45BE500BF15C2 /* LoanViewModel.m */,
-				28C7629318C4610E00BF15C2 /* LoanTableDataSource.h */,
-				28C7629418C4610E00BF15C2 /* LoanTableDataSource.m */,
+				28A147F418DA052000EF855D /* Login */,
+				28A147F518DA053F00EF855D /* LoansList */,
+				28A147F618DA05D600EF855D /* LoanDetail */,
+				28A147F718DA081500EF855D /* Models */,
 				28678EC318A674E400A1960B /* Images.xcassets */,
 				28678EB218A674E400A1960B /* Supporting Files */,
-				28C7629718C4ABB100BF15C2 /* LoanableItem.h */,
-				28C7629818C4ABB100BF15C2 /* LoanableItem.m */,
-				2832BCE618C8F4AE0067FBA3 /* LoanCell.h */,
-				2832BCE718C8F4AE0067FBA3 /* LoanCell.m */,
-				2832BCE918CB79060067FBA3 /* LoanDetailViewController.h */,
-				2832BCEA18CB79060067FBA3 /* LoanDetailViewController.m */,
-				2832BCEC18CB80AB0067FBA3 /* LoanDetailViewModel.h */,
-				2832BCED18CB80AB0067FBA3 /* LoanDetailViewModel.m */,
 			);
 			path = Helmi;
 			sourceTree = "<group>";
@@ -241,6 +223,56 @@
 				28678ED318A674E400A1960B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28A147F418DA052000EF855D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				28678EC018A674E400A1960B /* LoginViewController.h */,
+				28678EC118A674E400A1960B /* LoginViewController.m */,
+				286C639B18ABEC6B005C84D5 /* LoginViewModel.h */,
+				286C639C18ABEC6B005C84D5 /* LoginViewModel.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		28A147F518DA053F00EF855D /* LoansList */ = {
+			isa = PBXGroup;
+			children = (
+				28462A6A18BBB0F30011A14D /* LoanViewController.h */,
+				28462A6B18BBB0F30011A14D /* LoanViewController.m */,
+				28C7628F18C45BE500BF15C2 /* LoanViewModel.h */,
+				28C7629018C45BE500BF15C2 /* LoanViewModel.m */,
+				28C7629318C4610E00BF15C2 /* LoanTableDataSource.h */,
+				28C7629418C4610E00BF15C2 /* LoanTableDataSource.m */,
+				2832BCE618C8F4AE0067FBA3 /* LoanCell.h */,
+				2832BCE718C8F4AE0067FBA3 /* LoanCell.m */,
+			);
+			name = LoansList;
+			sourceTree = "<group>";
+		};
+		28A147F618DA05D600EF855D /* LoanDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2832BCE918CB79060067FBA3 /* LoanDetailViewController.h */,
+				2832BCEA18CB79060067FBA3 /* LoanDetailViewController.m */,
+				2832BCEC18CB80AB0067FBA3 /* LoanDetailViewModel.h */,
+				2832BCED18CB80AB0067FBA3 /* LoanDetailViewModel.m */,
+			);
+			name = LoanDetail;
+			sourceTree = "<group>";
+		};
+		28A147F718DA081500EF855D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28462A5F18B7CC6F0011A14D /* HelmetAPIClient.h */,
+				28462A6018B7CC6F0011A14D /* HelmetAPIClient.m */,
+				28462A6318B9EEC70011A14D /* User.h */,
+				28462A6418B9EEC70011A14D /* User.m */,
+				28C7629718C4ABB100BF15C2 /* LoanableItem.h */,
+				28C7629818C4ABB100BF15C2 /* LoanableItem.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
