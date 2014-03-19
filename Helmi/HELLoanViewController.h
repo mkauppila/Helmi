@@ -10,6 +10,6 @@
 
 @class HELUser;
 
-@interface LoanViewController : UITableViewController
+@interface HELLoanViewController : UITableViewController
 @property (strong, nonatomic) HELUser *currentUser;
 @end

@@ -11,7 +11,7 @@
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
 
-#import "LoanViewController.h"
+#import "HELLoanViewController.h"
 
 #import "LoginViewModel.h"
 #import "HELApiClient.h"
@@ -65,7 +65,7 @@
     }] subscribeNext:^(NSNumber *x) {
         @strongify(self);
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        LoanViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"LoanTableViewControllerID"];
+        HELLoanViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"LoanTableViewControllerID"];
         [controller setCurrentUser:[self.loginViewModel currentUser]];
         
         [self.navigationController pushViewController:controller

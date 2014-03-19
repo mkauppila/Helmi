@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Markus Kauppila. All rights reserved.
 //
 
-#import "LoanViewModel.h"
+#import "HELLoanViewModel.h"
 
-@implementation LoanViewModel
+@implementation HELLoanViewModel
 
 - (instancetype)init
 {

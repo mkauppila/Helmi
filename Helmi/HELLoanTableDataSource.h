@@ -10,7 +10,7 @@
 
 typedef void (^LoanTableViewCellConfigureBlock)(id cell, id item);
 
-@interface LoanTableDataSource : NSObject <UITableViewDataSource>
+@interface HELLoanTableDataSource : NSObject <UITableViewDataSource>
 
 - (instancetype)initWithItems:(NSArray *)data
               reuseIdentifier:(NSString *)reuseIdentifier

@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Markus Kauppila. All rights reserved.
 //
 
-#import "LoanCell.h"
+#import "HELLoanCell.h"
 
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
 
 #import "HELLoanableItem.h"
 
-@implementation LoanCell
+@implementation HELLoanCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

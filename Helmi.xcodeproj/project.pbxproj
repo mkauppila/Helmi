@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2832BCE818C8F4AE0067FBA3 /* LoanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832BCE718C8F4AE0067FBA3 /* LoanCell.m */; };
+		2832BCE818C8F4AE0067FBA3 /* HELLoanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832BCE718C8F4AE0067FBA3 /* HELLoanCell.m */; };
 		2832BCEB18CB79060067FBA3 /* HELLoanDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832BCEA18CB79060067FBA3 /* HELLoanDetailViewController.m */; };
 		2832BCEE18CB80AB0067FBA3 /* HELLoanDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832BCED18CB80AB0067FBA3 /* HELLoanDetailViewModel.m */; };
 		2832BCEF18CB80AB0067FBA3 /* HELLoanDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832BCED18CB80AB0067FBA3 /* HELLoanDetailViewModel.m */; };
@@ -16,7 +16,7 @@
 		28462A6518B9EEC70011A14D /* HELUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 28462A6418B9EEC70011A14D /* HELUser.m */; };
 		28462A6618B9EEC70011A14D /* HELUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 28462A6418B9EEC70011A14D /* HELUser.m */; };
 		28462A6818BA4E840011A14D /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = 28462A6718BA4E840011A14D /* login.json */; };
-		28462A6C18BBB0F30011A14D /* LoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28462A6B18BBB0F30011A14D /* LoanViewController.m */; };
+		28462A6C18BBB0F30011A14D /* HELLoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28462A6B18BBB0F30011A14D /* HELLoanViewController.m */; };
 		28678EAC18A674E400A1960B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678EAB18A674E400A1960B /* Foundation.framework */; };
 		28678EAE18A674E400A1960B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678EAD18A674E400A1960B /* CoreGraphics.framework */; };
 		28678EB018A674E400A1960B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678EAF18A674E400A1960B /* UIKit.framework */; };
@@ -33,10 +33,10 @@
 		28678ED718A674E400A1960B /* UserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 28678ED618A674E400A1960B /* UserSpec.m */; };
 		286C639D18ABEC6B005C84D5 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C639C18ABEC6B005C84D5 /* LoginViewModel.m */; };
 		286C639E18ABEC6B005C84D5 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C639C18ABEC6B005C84D5 /* LoginViewModel.m */; };
-		28C7629118C45BE500BF15C2 /* LoanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629018C45BE500BF15C2 /* LoanViewModel.m */; };
-		28C7629218C45BE500BF15C2 /* LoanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629018C45BE500BF15C2 /* LoanViewModel.m */; };
-		28C7629518C4610E00BF15C2 /* LoanTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629418C4610E00BF15C2 /* LoanTableDataSource.m */; };
-		28C7629618C4610E00BF15C2 /* LoanTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629418C4610E00BF15C2 /* LoanTableDataSource.m */; };
+		28C7629118C45BE500BF15C2 /* HELLoanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629018C45BE500BF15C2 /* HELLoanViewModel.m */; };
+		28C7629218C45BE500BF15C2 /* HELLoanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629018C45BE500BF15C2 /* HELLoanViewModel.m */; };
+		28C7629518C4610E00BF15C2 /* HELLoanTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629418C4610E00BF15C2 /* HELLoanTableDataSource.m */; };
+		28C7629618C4610E00BF15C2 /* HELLoanTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629418C4610E00BF15C2 /* HELLoanTableDataSource.m */; };
 		28C7629918C4ABB100BF15C2 /* HELLoanableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629818C4ABB100BF15C2 /* HELLoanableItem.m */; };
 		28C7629A18C4ABB100BF15C2 /* HELLoanableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629818C4ABB100BF15C2 /* HELLoanableItem.m */; };
 		28C7629E18C5B87000BF15C2 /* SpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629C18C5B87000BF15C2 /* SpecHelper.m */; };
@@ -57,8 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2832BCE618C8F4AE0067FBA3 /* LoanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoanCell.h; path = ../LoanCell.h; sourceTree = "<group>"; };
-		2832BCE718C8F4AE0067FBA3 /* LoanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanCell.m; path = ../LoanCell.m; sourceTree = "<group>"; };
+		2832BCE618C8F4AE0067FBA3 /* HELLoanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HELLoanCell.h; path = ../HELLoanCell.h; sourceTree = "<group>"; };
+		2832BCE718C8F4AE0067FBA3 /* HELLoanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HELLoanCell.m; path = ../HELLoanCell.m; sourceTree = "<group>"; };
 		2832BCE918CB79060067FBA3 /* HELLoanDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HELLoanDetailViewController.h; sourceTree = "<group>"; };
 		2832BCEA18CB79060067FBA3 /* HELLoanDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HELLoanDetailViewController.m; sourceTree = "<group>"; };
 		2832BCEC18CB80AB0067FBA3 /* HELLoanDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HELLoanDetailViewModel.h; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 		28462A6318B9EEC70011A14D /* HELUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HELUser.h; sourceTree = "<group>"; };
 		28462A6418B9EEC70011A14D /* HELUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HELUser.m; sourceTree = "<group>"; };
 		28462A6718BA4E840011A14D /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
-		28462A6A18BBB0F30011A14D /* LoanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanViewController.h; sourceTree = "<group>"; };
-		28462A6B18BBB0F30011A14D /* LoanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanViewController.m; sourceTree = "<group>"; };
+		28462A6A18BBB0F30011A14D /* HELLoanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HELLoanViewController.h; sourceTree = "<group>"; };
+		28462A6B18BBB0F30011A14D /* HELLoanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HELLoanViewController.m; sourceTree = "<group>"; };
 		28678EA818A674E400A1960B /* Helmi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helmi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28678EAB18A674E400A1960B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		28678EAD18A674E400A1960B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,10 +91,10 @@
 		28678ED618A674E400A1960B /* UserSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserSpec.m; sourceTree = "<group>"; };
 		286C639B18ABEC6B005C84D5 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		286C639C18ABEC6B005C84D5 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
-		28C7628F18C45BE500BF15C2 /* LoanViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanViewModel.h; sourceTree = "<group>"; };
-		28C7629018C45BE500BF15C2 /* LoanViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanViewModel.m; sourceTree = "<group>"; };
-		28C7629318C4610E00BF15C2 /* LoanTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanTableDataSource.h; sourceTree = "<group>"; };
-		28C7629418C4610E00BF15C2 /* LoanTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanTableDataSource.m; sourceTree = "<group>"; };
+		28C7628F18C45BE500BF15C2 /* HELLoanViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HELLoanViewModel.h; sourceTree = "<group>"; };
+		28C7629018C45BE500BF15C2 /* HELLoanViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HELLoanViewModel.m; sourceTree = "<group>"; };
+		28C7629318C4610E00BF15C2 /* HELLoanTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HELLoanTableDataSource.h; sourceTree = "<group>"; };
+		28C7629418C4610E00BF15C2 /* HELLoanTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HELLoanTableDataSource.m; sourceTree = "<group>"; };
 		28C7629718C4ABB100BF15C2 /* HELLoanableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HELLoanableItem.h; sourceTree = "<group>"; };
 		28C7629818C4ABB100BF15C2 /* HELLoanableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HELLoanableItem.m; sourceTree = "<group>"; };
 		28C7629B18C5B87000BF15C2 /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
@@ -239,14 +239,14 @@
 		28A147F518DA053F00EF855D /* LoansList */ = {
 			isa = PBXGroup;
 			children = (
-				28462A6A18BBB0F30011A14D /* LoanViewController.h */,
-				28462A6B18BBB0F30011A14D /* LoanViewController.m */,
-				28C7628F18C45BE500BF15C2 /* LoanViewModel.h */,
-				28C7629018C45BE500BF15C2 /* LoanViewModel.m */,
-				28C7629318C4610E00BF15C2 /* LoanTableDataSource.h */,
-				28C7629418C4610E00BF15C2 /* LoanTableDataSource.m */,
-				2832BCE618C8F4AE0067FBA3 /* LoanCell.h */,
-				2832BCE718C8F4AE0067FBA3 /* LoanCell.m */,
+				28462A6A18BBB0F30011A14D /* HELLoanViewController.h */,
+				28462A6B18BBB0F30011A14D /* HELLoanViewController.m */,
+				28C7628F18C45BE500BF15C2 /* HELLoanViewModel.h */,
+				28C7629018C45BE500BF15C2 /* HELLoanViewModel.m */,
+				28C7629318C4610E00BF15C2 /* HELLoanTableDataSource.h */,
+				28C7629418C4610E00BF15C2 /* HELLoanTableDataSource.m */,
+				2832BCE618C8F4AE0067FBA3 /* HELLoanCell.h */,
+				2832BCE718C8F4AE0067FBA3 /* HELLoanCell.m */,
 			);
 			name = LoansList;
 			sourceTree = "<group>";
@@ -442,16 +442,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2832BCE818C8F4AE0067FBA3 /* LoanCell.m in Sources */,
-				28C7629118C45BE500BF15C2 /* LoanViewModel.m in Sources */,
+				2832BCE818C8F4AE0067FBA3 /* HELLoanCell.m in Sources */,
+				28C7629118C45BE500BF15C2 /* HELLoanViewModel.m in Sources */,
 				28462A6118B7CC6F0011A14D /* HELApiClient.m in Sources */,
-				28462A6C18BBB0F30011A14D /* LoanViewController.m in Sources */,
+				28462A6C18BBB0F30011A14D /* HELLoanViewController.m in Sources */,
 				286C639D18ABEC6B005C84D5 /* LoginViewModel.m in Sources */,
 				2832BCEE18CB80AB0067FBA3 /* HELLoanDetailViewModel.m in Sources */,
 				28462A6518B9EEC70011A14D /* HELUser.m in Sources */,
 				28C7629918C4ABB100BF15C2 /* HELLoanableItem.m in Sources */,
 				28678EC218A674E400A1960B /* LoginViewController.m in Sources */,
-				28C7629518C4610E00BF15C2 /* LoanTableDataSource.m in Sources */,
+				28C7629518C4610E00BF15C2 /* HELLoanTableDataSource.m in Sources */,
 				2832BCEB18CB79060067FBA3 /* HELLoanDetailViewController.m in Sources */,
 				28678EBC18A674E400A1960B /* HELAppDelegate.m in Sources */,
 				28678EB818A674E400A1960B /* main.m in Sources */,
@@ -462,12 +462,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28C7629218C45BE500BF15C2 /* LoanViewModel.m in Sources */,
+				28C7629218C45BE500BF15C2 /* HELLoanViewModel.m in Sources */,
 				28462A6618B9EEC70011A14D /* HELUser.m in Sources */,
 				28C7629E18C5B87000BF15C2 /* SpecHelper.m in Sources */,
 				286C639E18ABEC6B005C84D5 /* LoginViewModel.m in Sources */,
 				28C762A118C5BE2C00BF15C2 /* LoanableItemSpec.m in Sources */,
-				28C7629618C4610E00BF15C2 /* LoanTableDataSource.m in Sources */,
+				28C7629618C4610E00BF15C2 /* HELLoanTableDataSource.m in Sources */,
 				28462A6218B7CC6F0011A14D /* HELApiClient.m in Sources */,
 				28C7629A18C4ABB100BF15C2 /* HELLoanableItem.m in Sources */,
 				28678ED718A674E400A1960B /* UserSpec.m in Sources */,

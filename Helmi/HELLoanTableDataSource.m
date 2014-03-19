@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 Markus Kauppila. All rights reserved.
 //
 
-#import "LoanTableDataSource.h"
+#import "HELLoanTableDataSource.h"
 
-@interface LoanTableDataSource ()
+@interface HELLoanTableDataSource ()
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, copy) NSString *reuseIdentifier;
 @property (nonatomic, copy) LoanTableViewCellConfigureBlock cellConfigurator;
 @end
 
-@implementation LoanTableDataSource
+@implementation HELLoanTableDataSource
 
 - (instancetype)initWithItems:(NSArray *)items
               reuseIdentifier:(NSString *)reuseIdentifier

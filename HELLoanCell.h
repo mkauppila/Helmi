@@ -12,7 +12,7 @@
 
 @class  HELLoanableItem;
 
-@interface LoanCell : UITableViewCell
+@interface HELLoanCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) HELLoanableItem *loanableItem;
 @end

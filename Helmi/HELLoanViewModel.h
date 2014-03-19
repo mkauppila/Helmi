@@ -10,7 +10,7 @@
 
 @class HELUser;
 
-@interface LoanViewModel : NSObject
+@interface HELLoanViewModel : NSObject
 @property (strong, nonatomic) HELUser *currentUser;
 @property (strong, nonatomic) NSString *title;
 @end
