@@ -23,6 +23,16 @@
 
 @implementation HelmetAPIClient
 
++ (instancetype)sharedInstance
+{
+    static HelmetAPIClient *client = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        client = [[HelmetAPIClient alloc] init];
+    });
+    return client;
+}
+
 - (RACSignal *)executeLogIn:(NSString *)libraryCardNumber pinCode:(NSString *)pinCode
 {
     [self setUserName:libraryCardNumber andPassword:pinCode];

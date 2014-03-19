@@ -14,6 +14,8 @@
 
 @interface HelmetAPIClient : NSObject
 
++ (instancetype)sharedInstance;
+
 - (RACSignal *)executeLogIn:(NSString *)libraryCardNumber pinCode:(NSString *)pinCode;
 
 - (RACSignal *)fetchInformationForLoanableItem:(LoanableItem *)item;
