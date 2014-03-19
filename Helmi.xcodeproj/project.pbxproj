@@ -323,6 +323,7 @@
 		28678EA018A674E400A1960B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HEL;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Markus Kauppila";
 				TargetAttributes = {
