@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Markus Kauppila. All rights reserved.
 //
 
-#import "LoanDetailViewModel.h"
+#import "HELLoanDetailViewModel.h"
 
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
@@ -15,11 +15,11 @@
 
 #import "HELApiClient.h"
 
-@interface LoanDetailViewModel ()
+@interface HELLoanDetailViewModel ()
 @property (strong, nonatomic) HELApiClient *apiClient;
 @end
 
-@implementation LoanDetailViewModel
+@implementation HELLoanDetailViewModel
 
 - (instancetype)initWithHelmetAPIClient:(HELApiClient *)apiClient
 {

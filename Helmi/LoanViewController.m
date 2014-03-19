@@ -11,7 +11,7 @@
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
 
-#import "LoanDetailViewController.h"
+#import "HELLoanDetailViewController.h"
 
 #import "LoanViewModel.h"
 #import "LoanTableDataSource.h"
@@ -67,7 +67,7 @@
 {
     if ([[segue identifier] isEqualToString:@"OpenLoanSegue"]) {
         LoanCell *loanCell = (LoanCell *)sender;
-        LoanDetailViewController *controller = (LoanDetailViewController *)[segue destinationViewController];
+        HELLoanDetailViewController *controller = (HELLoanDetailViewController *)[segue destinationViewController];
         [controller setLoanableItem:[loanCell loanableItem]];
     }
 }

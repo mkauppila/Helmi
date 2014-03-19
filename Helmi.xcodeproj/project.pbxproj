@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2832BCE818C8F4AE0067FBA3 /* LoanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832BCE718C8F4AE0067FBA3 /* LoanCell.m */; };
-		2832BCEB18CB79060067FBA3 /* LoanDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832BCEA18CB79060067FBA3 /* LoanDetailViewController.m */; };
-		2832BCEE18CB80AB0067FBA3 /* LoanDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832BCED18CB80AB0067FBA3 /* LoanDetailViewModel.m */; };
-		2832BCEF18CB80AB0067FBA3 /* LoanDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832BCED18CB80AB0067FBA3 /* LoanDetailViewModel.m */; };
+		2832BCEB18CB79060067FBA3 /* HELLoanDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832BCEA18CB79060067FBA3 /* HELLoanDetailViewController.m */; };
+		2832BCEE18CB80AB0067FBA3 /* HELLoanDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832BCED18CB80AB0067FBA3 /* HELLoanDetailViewModel.m */; };
+		2832BCEF18CB80AB0067FBA3 /* HELLoanDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832BCED18CB80AB0067FBA3 /* HELLoanDetailViewModel.m */; };
 		28462A6118B7CC6F0011A14D /* HELApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 28462A6018B7CC6F0011A14D /* HELApiClient.m */; };
 		28462A6218B7CC6F0011A14D /* HELApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 28462A6018B7CC6F0011A14D /* HELApiClient.m */; };
 		28462A6518B9EEC70011A14D /* HELUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 28462A6418B9EEC70011A14D /* HELUser.m */; };
@@ -59,10 +59,10 @@
 /* Begin PBXFileReference section */
 		2832BCE618C8F4AE0067FBA3 /* LoanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoanCell.h; path = ../LoanCell.h; sourceTree = "<group>"; };
 		2832BCE718C8F4AE0067FBA3 /* LoanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoanCell.m; path = ../LoanCell.m; sourceTree = "<group>"; };
-		2832BCE918CB79060067FBA3 /* LoanDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanDetailViewController.h; sourceTree = "<group>"; };
-		2832BCEA18CB79060067FBA3 /* LoanDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanDetailViewController.m; sourceTree = "<group>"; };
-		2832BCEC18CB80AB0067FBA3 /* LoanDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanDetailViewModel.h; sourceTree = "<group>"; };
-		2832BCED18CB80AB0067FBA3 /* LoanDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanDetailViewModel.m; sourceTree = "<group>"; };
+		2832BCE918CB79060067FBA3 /* HELLoanDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HELLoanDetailViewController.h; sourceTree = "<group>"; };
+		2832BCEA18CB79060067FBA3 /* HELLoanDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HELLoanDetailViewController.m; sourceTree = "<group>"; };
+		2832BCEC18CB80AB0067FBA3 /* HELLoanDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HELLoanDetailViewModel.h; sourceTree = "<group>"; };
+		2832BCED18CB80AB0067FBA3 /* HELLoanDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HELLoanDetailViewModel.m; sourceTree = "<group>"; };
 		28462A5F18B7CC6F0011A14D /* HELApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HELApiClient.h; sourceTree = "<group>"; };
 		28462A6018B7CC6F0011A14D /* HELApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HELApiClient.m; sourceTree = "<group>"; };
 		28462A6318B9EEC70011A14D /* HELUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HELUser.h; sourceTree = "<group>"; };
@@ -254,10 +254,10 @@
 		28A147F618DA05D600EF855D /* LoanDetail */ = {
 			isa = PBXGroup;
 			children = (
-				2832BCE918CB79060067FBA3 /* LoanDetailViewController.h */,
-				2832BCEA18CB79060067FBA3 /* LoanDetailViewController.m */,
-				2832BCEC18CB80AB0067FBA3 /* LoanDetailViewModel.h */,
-				2832BCED18CB80AB0067FBA3 /* LoanDetailViewModel.m */,
+				2832BCE918CB79060067FBA3 /* HELLoanDetailViewController.h */,
+				2832BCEA18CB79060067FBA3 /* HELLoanDetailViewController.m */,
+				2832BCEC18CB80AB0067FBA3 /* HELLoanDetailViewModel.h */,
+				2832BCED18CB80AB0067FBA3 /* HELLoanDetailViewModel.m */,
 			);
 			name = LoanDetail;
 			sourceTree = "<group>";
@@ -447,12 +447,12 @@
 				28462A6118B7CC6F0011A14D /* HELApiClient.m in Sources */,
 				28462A6C18BBB0F30011A14D /* LoanViewController.m in Sources */,
 				286C639D18ABEC6B005C84D5 /* LoginViewModel.m in Sources */,
-				2832BCEE18CB80AB0067FBA3 /* LoanDetailViewModel.m in Sources */,
+				2832BCEE18CB80AB0067FBA3 /* HELLoanDetailViewModel.m in Sources */,
 				28462A6518B9EEC70011A14D /* HELUser.m in Sources */,
 				28C7629918C4ABB100BF15C2 /* HELLoanableItem.m in Sources */,
 				28678EC218A674E400A1960B /* LoginViewController.m in Sources */,
 				28C7629518C4610E00BF15C2 /* LoanTableDataSource.m in Sources */,
-				2832BCEB18CB79060067FBA3 /* LoanDetailViewController.m in Sources */,
+				2832BCEB18CB79060067FBA3 /* HELLoanDetailViewController.m in Sources */,
 				28678EBC18A674E400A1960B /* HELAppDelegate.m in Sources */,
 				28678EB818A674E400A1960B /* main.m in Sources */,
 			);
@@ -471,7 +471,7 @@
 				28462A6218B7CC6F0011A14D /* HELApiClient.m in Sources */,
 				28C7629A18C4ABB100BF15C2 /* HELLoanableItem.m in Sources */,
 				28678ED718A674E400A1960B /* UserSpec.m in Sources */,
-				2832BCEF18CB80AB0067FBA3 /* LoanDetailViewModel.m in Sources */,
+				2832BCEF18CB80AB0067FBA3 /* HELLoanDetailViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

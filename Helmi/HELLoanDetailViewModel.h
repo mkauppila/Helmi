@@ -13,7 +13,7 @@
 
 @class RACCommand;
 
-@interface LoanDetailViewModel : NSObject
+@interface HELLoanDetailViewModel : NSObject
 @property (nonatomic, strong) HELLoanableItem *item;
 
 - (instancetype)initWithHelmetAPIClient:(HELApiClient *)apiClient;

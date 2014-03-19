@@ -10,6 +10,6 @@
 
 @class HELLoanableItem;
 
-@interface LoanDetailViewController : UIViewController
+@interface HELLoanDetailViewController : UIViewController
 @property (nonatomic, strong) HELLoanableItem *loanableItem;
 @end

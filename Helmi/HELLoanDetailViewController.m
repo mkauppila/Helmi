@@ -6,28 +6,28 @@
 //  Copyright (c) 2014 Markus Kauppila. All rights reserved.
 //
 
-#import "LoanDetailViewController.h"
+#import "HELLoanDetailViewController.h"
 
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
 
-#import "LoanDetailViewModel.h"
+#import "HELLoanDetailViewModel.h"
 #import "HELLoanableItem.h"
 #import "HELApiClient.h"
 
-@interface LoanDetailViewController ()
+@interface HELLoanDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *renewButton;
 
-@property (nonatomic, strong) LoanDetailViewModel *detailViewModel;
+@property (nonatomic, strong) HELLoanDetailViewModel *detailViewModel;
 @end
 
-@implementation LoanDetailViewController
+@implementation HELLoanDetailViewController
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        _detailViewModel = [[LoanDetailViewModel alloc] initWithHelmetAPIClient:[HELApiClient sharedInstance]];
+        _detailViewModel = [[HELLoanDetailViewModel alloc] initWithHelmetAPIClient:[HELApiClient sharedInstance]];
     }
     return self;
 }
