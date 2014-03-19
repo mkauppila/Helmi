@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Markus Kauppila. All rights reserved.
 //
 
-#import "HelmetAPIClient.h"
+#import "HELApiClient.h"
 
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
@@ -14,21 +14,21 @@
 
 #import "LoanableItem.h"
 
-@interface HelmetAPIClient () {
+@interface HELApiClient () {
     AFHTTPRequestOperationManager *_manager;
 }
 @property (strong, nonatomic, readonly) NSString *user;
 @property (strong, nonatomic, readonly) NSString *password;
 @end
 
-@implementation HelmetAPIClient
+@implementation HELApiClient
 
 + (instancetype)sharedInstance
 {
-    static HelmetAPIClient *client = nil;
+    static HELApiClient *client = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        client = [[HelmetAPIClient alloc] init];
+        client = [[HELApiClient alloc] init];
     });
     return client;
 }

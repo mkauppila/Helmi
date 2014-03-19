@@ -12,7 +12,7 @@
 
 @class LoanableItem;
 
-@interface HelmetAPIClient : NSObject
+@interface HELApiClient : NSObject
 
 + (instancetype)sharedInstance;
 

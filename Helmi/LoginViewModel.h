@@ -11,7 +11,7 @@
 @class RACSignal;
 @class RACCommand;
 
-@class HelmetAPIClient;
+@class HELApiClient;
 @class User;
 
 @interface LoginViewModel : NSObject
@@ -24,7 +24,7 @@
 
 @property (strong, nonatomic) User *currentUser;
 
-- (instancetype)initWithAPIClient:(HelmetAPIClient *)apiClient;
+- (instancetype)initWithAPIClient:(HELApiClient *)apiClient;
 
 - (void)initializeForLogin;
 

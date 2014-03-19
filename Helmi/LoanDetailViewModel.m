@@ -13,15 +13,15 @@
 
 #import "LoanableItem.h"
 
-#import "HelmetAPIClient.h"
+#import "HELApiClient.h"
 
 @interface LoanDetailViewModel ()
-@property (strong, nonatomic) HelmetAPIClient *apiClient;
+@property (strong, nonatomic) HELApiClient *apiClient;
 @end
 
 @implementation LoanDetailViewModel
 
-- (instancetype)initWithHelmetAPIClient:(HelmetAPIClient *)apiClient
+- (instancetype)initWithHelmetAPIClient:(HELApiClient *)apiClient
 {
     self = [super init];
     if (self) {

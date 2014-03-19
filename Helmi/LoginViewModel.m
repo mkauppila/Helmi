@@ -11,18 +11,18 @@
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
 
-#import "HelmetAPIClient.h"
+#import "HELApiClient.h"
 
 #import "User.h"
 #import "LoanableItem.h"
 
 @interface LoginViewModel ()
-@property (strong, nonatomic, readonly) HelmetAPIClient *apiClient;
+@property (strong, nonatomic, readonly) HELApiClient *apiClient;
 @end
 
 @implementation LoginViewModel
 
-- (instancetype)initWithAPIClient:(HelmetAPIClient *)apiClient
+- (instancetype)initWithAPIClient:(HELApiClient *)apiClient
 {
     self = [super init];
     if (self) {

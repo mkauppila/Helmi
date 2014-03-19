@@ -14,7 +14,7 @@
 #import "LoanViewController.h"
 
 #import "LoginViewModel.h"
-#import "HelmetAPIClient.h"
+#import "HELApiClient.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *cardNumberTextField;
@@ -32,7 +32,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         _loginViewModel = [[LoginViewModel alloc] initWithAPIClient:
-                           [HelmetAPIClient sharedInstance]];
+                           [HELApiClient sharedInstance]];
     }
     return self;
 }
