@@ -31,7 +31,8 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        _loginViewModel = [[LoginViewModel alloc] initWithAPIClient:[HelmetAPIClient new]];
+        _loginViewModel = [[LoginViewModel alloc] initWithAPIClient:
+                           [HelmetAPIClient sharedInstance]];
     }
     return self;
 }
