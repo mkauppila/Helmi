@@ -10,9 +10,9 @@
 
 @class  RACDisposable;
 
-@class  LoanableItem;
+@class  HELLoanableItem;
 
 @interface LoanCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
-@property (nonatomic, strong) LoanableItem *loanableItem;
+@property (nonatomic, strong) HELLoanableItem *loanableItem;
 @end

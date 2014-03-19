@@ -12,7 +12,7 @@
 #import <libextobjc/EXTScope.h>
 #import <AFHTTPRequestOperationManager+RACSupport.h>
 
-#import "LoanableItem.h"
+#import "HELLoanableItem.h"
 
 @interface HELApiClient () {
     AFHTTPRequestOperationManager *_manager;
@@ -54,7 +54,7 @@
             self.user];
 }
 
-- (RACSignal *)fetchInformationForLoanableItem:(LoanableItem *)item
+- (RACSignal *)fetchInformationForLoanableItem:(HELLoanableItem *)item
 {
     RACSignal *fetch = [[self manager] rac_GET:[self itemInformationUrlForItem:[item identifier]]
                                     parameters:nil];
@@ -68,7 +68,7 @@
             itemIdentifier];
 }
 
-- (RACSignal *)renewLoan:(LoanableItem *)item
+- (RACSignal *)renewLoan:(HELLoanableItem *)item
 {
     RACSignal *renew = [[self manager] rac_POST:[self urlForRenewingLoan:[item identifier]] parameters:nil];
     [renew logAll];

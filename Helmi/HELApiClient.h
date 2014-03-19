@@ -10,7 +10,7 @@
 
 @class RACSignal;
 
-@class LoanableItem;
+@class HELLoanableItem;
 
 @interface HELApiClient : NSObject
 
@@ -18,8 +18,8 @@
 
 - (RACSignal *)executeLogIn:(NSString *)libraryCardNumber pinCode:(NSString *)pinCode;
 
-- (RACSignal *)fetchInformationForLoanableItem:(LoanableItem *)item;
+- (RACSignal *)fetchInformationForLoanableItem:(HELLoanableItem *)item;
 
-- (RACSignal *)renewLoan:(LoanableItem *)item;
+- (RACSignal *)renewLoan:(HELLoanableItem *)item;
 
 @end

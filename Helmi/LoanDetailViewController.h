@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class LoanableItem;
+@class HELLoanableItem;
 
 @interface LoanDetailViewController : UIViewController
-@property (nonatomic, strong) LoanableItem *loanableItem;
+@property (nonatomic, strong) HELLoanableItem *loanableItem;
 @end

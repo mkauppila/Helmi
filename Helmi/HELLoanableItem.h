@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LoanableItem : NSObject
+@interface HELLoanableItem : NSObject
 @property (nonatomic, copy, readonly) NSString *identifier;
 
 @property (nonatomic, copy, readonly) NSString *title;

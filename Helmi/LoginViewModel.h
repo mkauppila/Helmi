@@ -12,7 +12,7 @@
 @class RACCommand;
 
 @class HELApiClient;
-@class User;
+@class HELUser;
 
 @interface LoginViewModel : NSObject
 
@@ -22,7 +22,7 @@
 @property (assign, nonatomic) BOOL didSucceedToLogin;
 @property (strong, nonatomic) NSString *loginErrorMessage;
 
-@property (strong, nonatomic) User *currentUser;
+@property (strong, nonatomic) HELUser *currentUser;
 
 - (instancetype)initWithAPIClient:(HELApiClient *)apiClient;
 

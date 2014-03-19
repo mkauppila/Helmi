@@ -11,7 +11,7 @@
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
 
-#import "LoanableItem.h"
+#import "HELLoanableItem.h"
 
 @implementation LoanCell
 
@@ -23,7 +23,7 @@
     return self;
 }
 
-- (void)setLoanableItem:(LoanableItem *)item
+- (void)setLoanableItem:(HELLoanableItem *)item
 {
     _loanableItem = item;
     

@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Markus Kauppila. All rights reserved.
 //
 
-#import "LoanableItem.h"
+#import "HELLoanableItem.h"
 
-@interface LoanableItem ()
+@interface HELLoanableItem ()
 @property (nonatomic, copy) NSString *identifier;
 
 @property (nonatomic, copy) NSString *title;
@@ -19,7 +19,7 @@
 @property (nonatomic, copy) NSString *authorLastName;
 @end
 
-@implementation LoanableItem
+@implementation HELLoanableItem
 
 - (instancetype)initWithIdentifier:(NSString *)identifier
 {

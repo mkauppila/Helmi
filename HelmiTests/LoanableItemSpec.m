@@ -10,15 +10,15 @@
 
 #import "SpecHelper.h"
 
-#import "LoanableItem.h"
+#import "HELLoanableItem.h"
 
 SPEC_BEGIN(LoanableItemSpec)
 
 describe(@"Loanble item", ^{
-    __block LoanableItem *item = nil;
+    __block HELLoanableItem *item = nil;
     
     beforeEach(^{
-        item = [[LoanableItem alloc] initWithIdentifier:@"123456"];
+        item = [[HELLoanableItem alloc] initWithIdentifier:@"123456"];
         NSDictionary *itemInfo = LoadTestData(@"item");
 
         [item loadInformationFrom:itemInfo];

@@ -13,8 +13,8 @@
 
 #import "HELApiClient.h"
 
-#import "User.h"
-#import "LoanableItem.h"
+#import "HELUser.h"
+#import "HELLoanableItem.h"
 
 @interface LoginViewModel ()
 @property (strong, nonatomic, readonly) HELApiClient *apiClient;
@@ -86,7 +86,7 @@
         NSArray *loanableItems = [self createLoanableItems:userInfo];
         [self fetchInformationForLoanableItems:loanableItems];
         
-        self.currentUser = [[User alloc] initWithUserInfo:userInfo
+        self.currentUser = [[HELUser alloc] initWithUserInfo:userInfo
                                          andLoanableItems:loanableItems];
         NSLog(@"user: %@", self.currentUser);
         
@@ -107,7 +107,7 @@
 
     NSMutableArray *items = [NSMutableArray array];
     [identifiers enumerateObjectsUsingBlock:^(NSString *identifier, NSUInteger idx, BOOL *stop) {
-        [items addObject:[[LoanableItem alloc] initWithIdentifier:identifier]];
+        [items addObject:[[HELLoanableItem alloc] initWithIdentifier:identifier]];
     }];
     
     return items;
@@ -115,7 +115,7 @@
 
 - (void)fetchInformationForLoanableItems:(NSArray *)loanableItems
 {
-    [loanableItems enumerateObjectsUsingBlock:^(LoanableItem *item, NSUInteger idx, BOOL *stop) {
+    [loanableItems enumerateObjectsUsingBlock:^(HELLoanableItem *item, NSUInteger idx, BOOL *stop) {
         RACSignal *fetch = [self.apiClient fetchInformationForLoanableItem:item];
         
         [fetch subscribeNext:^(RACTuple *response) {

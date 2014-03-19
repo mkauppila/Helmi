@@ -11,7 +11,7 @@
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
 
-#import "LoanableItem.h"
+#import "HELLoanableItem.h"
 
 #import "HELApiClient.h"
 

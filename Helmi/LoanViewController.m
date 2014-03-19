@@ -17,8 +17,8 @@
 #import "LoanTableDataSource.h"
 #import "LoanCell.h"
 
-#import "LoanableItem.h"
-#import "User.h"
+#import "HELLoanableItem.h"
+#import "HELUser.h"
 
 @interface LoanViewController ()
 @property (strong, nonatomic) LoanViewModel *loanViewModel;
@@ -45,7 +45,7 @@
     RAC(self, title) = RACObserve(self.loanViewModel, title);
     
     NSString *const reuseId = @"LoanCellReuseIdentifier";
-    void (^cellConfigurator)(LoanCell *, LoanableItem *) = ^(LoanCell *cell, LoanableItem *item) {
+    void (^cellConfigurator)(LoanCell *, HELLoanableItem *) = ^(LoanCell *cell, HELLoanableItem *item) {
         [cell setLoanableItem:item];
     };
     

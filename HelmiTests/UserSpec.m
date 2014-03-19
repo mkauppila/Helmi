@@ -10,18 +10,18 @@
 
 #import "SpecHelper.h"
 
-#import "User.h"
-#import "LoanableItem.h"
+#import "HELUser.h"
+#import "HELLoanableItem.h"
 
 SPEC_BEGIN(UserSpec)
 
 describe(@"User", ^{
-    __block User *user = nil;
+    __block HELUser *user = nil;
     
     beforeEach(^{
         NSDictionary *userInfo = LoadTestData(@"login");
-        LoanableItem *item = [[LoanableItem alloc] initWithIdentifier:@"aa"];
-        user = [[User alloc] initWithUserInfo:userInfo andLoanableItems:@[item]];
+        HELLoanableItem *item = [[HELLoanableItem alloc] initWithIdentifier:@"aa"];
+        user = [[HELUser alloc] initWithUserInfo:userInfo andLoanableItems:@[item]];
     });
     
     afterEach(^{

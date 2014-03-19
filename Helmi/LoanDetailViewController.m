@@ -12,7 +12,7 @@
 #import <libextobjc/EXTScope.h>
 
 #import "LoanDetailViewModel.h"
-#import "LoanableItem.h"
+#import "HELLoanableItem.h"
 #import "HELApiClient.h"
 
 @interface LoanDetailViewController ()

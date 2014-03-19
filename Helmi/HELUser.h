@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject
+@interface HELUser : NSObject
 // full name in format "Pulkkinen, Matti Olli"
 @property (strong, nonatomic, readonly) NSString *personalName;
 @property (strong, nonatomic, readonly) NSString *emailAddress;

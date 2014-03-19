@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@class LoanableItem;
+@class HELLoanableItem;
 @class HELApiClient;
 
 @class RACCommand;
 
 @interface LoanDetailViewModel : NSObject
-@property (nonatomic, strong) LoanableItem *item;
+@property (nonatomic, strong) HELLoanableItem *item;
 
 - (instancetype)initWithHelmetAPIClient:(HELApiClient *)apiClient;
 
