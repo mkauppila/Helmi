@@ -6,32 +6,32 @@
 //  Copyright (c) 2014 Markus Kauppila. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "HELLoginViewController.h"
 
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
 
 #import "HELLoanViewController.h"
 
-#import "LoginViewModel.h"
+#import "HELLoginViewModel.h"
 #import "HELApiClient.h"
 
-@interface LoginViewController ()
+@interface HELLoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *cardNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *pinCodeTextField;
 @property (weak, nonatomic) IBOutlet UIButton *logInButton;
 @property (weak, nonatomic) IBOutlet UILabel *loginErrorLabel;
 
-@property (strong, nonatomic) LoginViewModel *loginViewModel;
+@property (strong, nonatomic) HELLoginViewModel *loginViewModel;
 @end
 
-@implementation LoginViewController
+@implementation HELLoginViewController
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        _loginViewModel = [[LoginViewModel alloc] initWithAPIClient:
+        _loginViewModel = [[HELLoginViewModel alloc] initWithAPIClient:
                            [HELApiClient sharedInstance]];
     }
     return self;

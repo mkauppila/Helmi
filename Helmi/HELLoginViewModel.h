@@ -14,7 +14,7 @@
 @class HELApiClient;
 @class HELUser;
 
-@interface LoginViewModel : NSObject
+@interface HELLoginViewModel : NSObject
 
 @property (strong, nonatomic) NSString *libraryCardNumber;
 @property (strong, nonatomic) NSString *pinCode;

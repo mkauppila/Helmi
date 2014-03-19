@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Markus Kauppila. All rights reserved.
 //
 
-#import "LoginViewModel.h"
+#import "HELLoginViewModel.h"
 
 #import <ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
@@ -16,11 +16,11 @@
 #import "HELUser.h"
 #import "HELLoanableItem.h"
 
-@interface LoginViewModel ()
+@interface HELLoginViewModel ()
 @property (strong, nonatomic, readonly) HELApiClient *apiClient;
 @end
 
-@implementation LoginViewModel
+@implementation HELLoginViewModel
 
 - (instancetype)initWithAPIClient:(HELApiClient *)apiClient
 {

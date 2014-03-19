@@ -24,15 +24,15 @@
 		28678EB818A674E400A1960B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28678EB718A674E400A1960B /* main.m */; };
 		28678EBC18A674E400A1960B /* HELAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28678EBB18A674E400A1960B /* HELAppDelegate.m */; };
 		28678EBF18A674E400A1960B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28678EBD18A674E400A1960B /* Main.storyboard */; };
-		28678EC218A674E400A1960B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28678EC118A674E400A1960B /* LoginViewController.m */; };
+		28678EC218A674E400A1960B /* HELLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28678EC118A674E400A1960B /* HELLoginViewController.m */; };
 		28678EC418A674E400A1960B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28678EC318A674E400A1960B /* Images.xcassets */; };
 		28678ECB18A674E400A1960B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678ECA18A674E400A1960B /* XCTest.framework */; };
 		28678ECC18A674E400A1960B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678EAB18A674E400A1960B /* Foundation.framework */; };
 		28678ECD18A674E400A1960B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678EAF18A674E400A1960B /* UIKit.framework */; };
 		28678ED518A674E400A1960B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28678ED318A674E400A1960B /* InfoPlist.strings */; };
 		28678ED718A674E400A1960B /* UserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 28678ED618A674E400A1960B /* UserSpec.m */; };
-		286C639D18ABEC6B005C84D5 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C639C18ABEC6B005C84D5 /* LoginViewModel.m */; };
-		286C639E18ABEC6B005C84D5 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C639C18ABEC6B005C84D5 /* LoginViewModel.m */; };
+		286C639D18ABEC6B005C84D5 /* HELLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C639C18ABEC6B005C84D5 /* HELLoginViewModel.m */; };
+		286C639E18ABEC6B005C84D5 /* HELLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C639C18ABEC6B005C84D5 /* HELLoginViewModel.m */; };
 		28C7629118C45BE500BF15C2 /* HELLoanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629018C45BE500BF15C2 /* HELLoanViewModel.m */; };
 		28C7629218C45BE500BF15C2 /* HELLoanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629018C45BE500BF15C2 /* HELLoanViewModel.m */; };
 		28C7629518C4610E00BF15C2 /* HELLoanTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C7629418C4610E00BF15C2 /* HELLoanTableDataSource.m */; };
@@ -81,16 +81,16 @@
 		28678EBA18A674E400A1960B /* HELAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HELAppDelegate.h; sourceTree = "<group>"; };
 		28678EBB18A674E400A1960B /* HELAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HELAppDelegate.m; sourceTree = "<group>"; };
 		28678EBE18A674E400A1960B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		28678EC018A674E400A1960B /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		28678EC118A674E400A1960B /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		28678EC018A674E400A1960B /* HELLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HELLoginViewController.h; sourceTree = "<group>"; };
+		28678EC118A674E400A1960B /* HELLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HELLoginViewController.m; sourceTree = "<group>"; };
 		28678EC318A674E400A1960B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		28678EC918A674E400A1960B /* UnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28678ECA18A674E400A1960B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		28678ED218A674E400A1960B /* HelmiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelmiTests-Info.plist"; sourceTree = "<group>"; };
 		28678ED418A674E400A1960B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		28678ED618A674E400A1960B /* UserSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserSpec.m; sourceTree = "<group>"; };
-		286C639B18ABEC6B005C84D5 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
-		286C639C18ABEC6B005C84D5 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		286C639B18ABEC6B005C84D5 /* HELLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HELLoginViewModel.h; sourceTree = "<group>"; };
+		286C639C18ABEC6B005C84D5 /* HELLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HELLoginViewModel.m; sourceTree = "<group>"; };
 		28C7628F18C45BE500BF15C2 /* HELLoanViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HELLoanViewModel.h; sourceTree = "<group>"; };
 		28C7629018C45BE500BF15C2 /* HELLoanViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HELLoanViewModel.m; sourceTree = "<group>"; };
 		28C7629318C4610E00BF15C2 /* HELLoanTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HELLoanTableDataSource.h; sourceTree = "<group>"; };
@@ -228,10 +228,10 @@
 		28A147F418DA052000EF855D /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				28678EC018A674E400A1960B /* LoginViewController.h */,
-				28678EC118A674E400A1960B /* LoginViewController.m */,
-				286C639B18ABEC6B005C84D5 /* LoginViewModel.h */,
-				286C639C18ABEC6B005C84D5 /* LoginViewModel.m */,
+				28678EC018A674E400A1960B /* HELLoginViewController.h */,
+				28678EC118A674E400A1960B /* HELLoginViewController.m */,
+				286C639B18ABEC6B005C84D5 /* HELLoginViewModel.h */,
+				286C639C18ABEC6B005C84D5 /* HELLoginViewModel.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -446,11 +446,11 @@
 				28C7629118C45BE500BF15C2 /* HELLoanViewModel.m in Sources */,
 				28462A6118B7CC6F0011A14D /* HELApiClient.m in Sources */,
 				28462A6C18BBB0F30011A14D /* HELLoanViewController.m in Sources */,
-				286C639D18ABEC6B005C84D5 /* LoginViewModel.m in Sources */,
+				286C639D18ABEC6B005C84D5 /* HELLoginViewModel.m in Sources */,
 				2832BCEE18CB80AB0067FBA3 /* HELLoanDetailViewModel.m in Sources */,
 				28462A6518B9EEC70011A14D /* HELUser.m in Sources */,
 				28C7629918C4ABB100BF15C2 /* HELLoanableItem.m in Sources */,
-				28678EC218A674E400A1960B /* LoginViewController.m in Sources */,
+				28678EC218A674E400A1960B /* HELLoginViewController.m in Sources */,
 				28C7629518C4610E00BF15C2 /* HELLoanTableDataSource.m in Sources */,
 				2832BCEB18CB79060067FBA3 /* HELLoanDetailViewController.m in Sources */,
 				28678EBC18A674E400A1960B /* HELAppDelegate.m in Sources */,
@@ -465,7 +465,7 @@
 				28C7629218C45BE500BF15C2 /* HELLoanViewModel.m in Sources */,
 				28462A6618B9EEC70011A14D /* HELUser.m in Sources */,
 				28C7629E18C5B87000BF15C2 /* SpecHelper.m in Sources */,
-				286C639E18ABEC6B005C84D5 /* LoginViewModel.m in Sources */,
+				286C639E18ABEC6B005C84D5 /* HELLoginViewModel.m in Sources */,
 				28C762A118C5BE2C00BF15C2 /* LoanableItemSpec.m in Sources */,
 				28C7629618C4610E00BF15C2 /* HELLoanTableDataSource.m in Sources */,
 				28462A6218B7CC6F0011A14D /* HELApiClient.m in Sources */,
