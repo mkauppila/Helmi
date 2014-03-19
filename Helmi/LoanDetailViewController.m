@@ -13,6 +13,7 @@
 
 #import "LoanDetailViewModel.h"
 #import "LoanableItem.h"
+#import "HelmetAPIClient.h"
 
 @interface LoanDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *renewButton;
@@ -26,7 +27,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        _detailViewModel = [LoanDetailViewModel new];
+        _detailViewModel = [[LoanDetailViewModel alloc] initWithHelmetAPIClient:[HelmetAPIClient sharedInstance]];
     }
     return self;
 }

@@ -13,7 +13,22 @@
 
 #import "LoanableItem.h"
 
+#import "HelmetAPIClient.h"
+
+@interface LoanDetailViewModel ()
+@property (strong, nonatomic) HelmetAPIClient *apiClient;
+@end
+
 @implementation LoanDetailViewModel
+
+- (instancetype)initWithHelmetAPIClient:(HelmetAPIClient *)apiClient
+{
+    self = [super init];
+    if (self) {
+        _apiClient = apiClient;
+    }
+    return self;
+}
 
 - (RACCommand *)renewItemCommand
 {

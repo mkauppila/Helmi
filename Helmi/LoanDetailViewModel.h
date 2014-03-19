@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @class LoanableItem;
+@class HelmetAPIClient;
 
 @class RACCommand;
 
 @interface LoanDetailViewModel : NSObject
 @property (nonatomic, strong) LoanableItem *item;
+
+- (instancetype)initWithHelmetAPIClient:(HelmetAPIClient *)apiClient;
 
 - (RACCommand *)renewItemCommand;
 @end
