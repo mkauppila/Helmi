@@ -22,7 +22,7 @@
 		28678EB018A674E400A1960B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678EAF18A674E400A1960B /* UIKit.framework */; };
 		28678EB618A674E400A1960B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28678EB418A674E400A1960B /* InfoPlist.strings */; };
 		28678EB818A674E400A1960B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28678EB718A674E400A1960B /* main.m */; };
-		28678EBC18A674E400A1960B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28678EBB18A674E400A1960B /* AppDelegate.m */; };
+		28678EBC18A674E400A1960B /* HELAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28678EBB18A674E400A1960B /* HELAppDelegate.m */; };
 		28678EBF18A674E400A1960B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28678EBD18A674E400A1960B /* Main.storyboard */; };
 		28678EC218A674E400A1960B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28678EC118A674E400A1960B /* LoginViewController.m */; };
 		28678EC418A674E400A1960B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28678EC318A674E400A1960B /* Images.xcassets */; };
@@ -78,8 +78,8 @@
 		28678EB518A674E400A1960B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		28678EB718A674E400A1960B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28678EB918A674E400A1960B /* Helmi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Helmi-Prefix.pch"; sourceTree = "<group>"; };
-		28678EBA18A674E400A1960B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		28678EBB18A674E400A1960B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		28678EBA18A674E400A1960B /* HELAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HELAppDelegate.h; sourceTree = "<group>"; };
+		28678EBB18A674E400A1960B /* HELAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HELAppDelegate.m; sourceTree = "<group>"; };
 		28678EBE18A674E400A1960B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28678EC018A674E400A1960B /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		28678EC118A674E400A1960B /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 		28678EB118A674E400A1960B /* Helmi */ = {
 			isa = PBXGroup;
 			children = (
-				28678EBA18A674E400A1960B /* AppDelegate.h */,
-				28678EBB18A674E400A1960B /* AppDelegate.m */,
+				28678EBA18A674E400A1960B /* HELAppDelegate.h */,
+				28678EBB18A674E400A1960B /* HELAppDelegate.m */,
 				28678EBD18A674E400A1960B /* Main.storyboard */,
 				28A147F418DA052000EF855D /* Login */,
 				28A147F518DA053F00EF855D /* LoansList */,
@@ -452,7 +452,7 @@
 				28678EC218A674E400A1960B /* LoginViewController.m in Sources */,
 				28C7629518C4610E00BF15C2 /* LoanTableDataSource.m in Sources */,
 				2832BCEB18CB79060067FBA3 /* LoanDetailViewController.m in Sources */,
-				28678EBC18A674E400A1960B /* AppDelegate.m in Sources */,
+				28678EBC18A674E400A1960B /* HELAppDelegate.m in Sources */,
 				28678EB818A674E400A1960B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

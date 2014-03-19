@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Markus Kauppila. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "HELAppDelegate.h"
 
-@implementation AppDelegate
+@implementation HELAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
