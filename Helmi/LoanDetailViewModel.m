@@ -41,7 +41,16 @@
 
 - (RACSignal *)renewItem
 {
-    return [RACSignal empty];
+    RACSignal *renewSignal = [self.apiClient renewLoan:self.item];
+    
+    [renewSignal subscribeNext:^(RACTuple *response) {
+        NSDictionary *info = response.second;
+        NSLog(@"Response: %@", info);
+    } error:^(NSError *error) {
+        NSLog(@"error happend: %@", error);
+    }];
+    
+    return renewSignal;
 }
 
 @end
