@@ -145,12 +145,11 @@
 		28678E9F18A674E400A1960B = {
 			isa = PBXGroup;
 			children = (
+				471E4C9B190D61B6001CDDD7 /* Xconfigs */,
 				28678EB118A674E400A1960B /* Helmi */,
 				28678ED018A674E400A1960B /* HelmiTests */,
 				28678EAA18A674E400A1960B /* Frameworks */,
 				28678EA918A674E400A1960B /* Products */,
-				5F48A13424EA4B539FFA98BD /* Pods.xcconfig */,
-				C77C711F563B4B0DAB7F38AC /* Pods-UnitTest.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -273,6 +272,15 @@
 				28C7629818C4ABB100BF15C2 /* HELLoanableItem.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		471E4C9B190D61B6001CDDD7 /* Xconfigs */ = {
+			isa = PBXGroup;
+			children = (
+				5F48A13424EA4B539FFA98BD /* Pods.xcconfig */,
+				C77C711F563B4B0DAB7F38AC /* Pods-UnitTest.xcconfig */,
+			);
+			name = Xconfigs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
