@@ -101,6 +101,7 @@
 		28C7629C18C5B87000BF15C2 /* SpecHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecHelper.m; sourceTree = "<group>"; };
 		28C762A018C5BE2C00BF15C2 /* LoanableItemSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanableItemSpec.m; sourceTree = "<group>"; };
 		28C762A218C5C06C00BF15C2 /* item.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = item.json; sourceTree = "<group>"; };
+		471E4C9C190D637A001CDDD7 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = Xconfigs/Project.xcconfig; sourceTree = "<group>"; };
 		5F48A13424EA4B539FFA98BD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		770592FAD1AC40BDA82AA1FA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC661A8B3A7D440BA7BDC760 /* libPods-UnitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,6 +280,7 @@
 			children = (
 				5F48A13424EA4B539FFA98BD /* Pods.xcconfig */,
 				C77C711F563B4B0DAB7F38AC /* Pods-UnitTest.xcconfig */,
+				471E4C9C190D637A001CDDD7 /* Project.xcconfig */,
 			);
 			name = Xconfigs;
 			sourceTree = "<group>";
