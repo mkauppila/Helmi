@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Markus Kauppila. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 #import "HELAppDelegate.h"
 
