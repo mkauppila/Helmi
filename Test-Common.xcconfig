@@ -1,3 +1,7 @@
 
 #include "Pods/Pods-UnitTest.xcconfig"
 
+// Wgnu and -Wdisabled-macro-expansion are disabled because
+// Kiwi heavily uses the macro expasion and gnu extensions
+
+WARNING_CFLAGS = $(inherited) -Wno-gnu -Wno-disabled-macro-expansion
