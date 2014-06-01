@@ -47,7 +47,12 @@ GCC_TREAT_WARNINGS_AS_ERRORS = YES
 
 // -Wshadow -Wfloat-equal what are these?
 
-WARNING_CFLAGS = -Wall -Wextra -Weverything -Wno-objc-missing-property-synthesis -Wno-unused-parameter -Wno-direct-ivar-access
+// -Wassign-enum: disabled since it gives too many many false positives. When combining
+//                enumerated values the warning will complain about the "composite values"
+//                (such as NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) which
+//                makes no sense to me
+
+WARNING_CFLAGS = -Wall -Wextra -Weverything -Wno-assign-enum -Wno-objc-missing-property-synthesis -Wno-unused-parameter -Wno-direct-ivar-access
 
 // Whether to warn when overriding deprecated methods
 CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES
