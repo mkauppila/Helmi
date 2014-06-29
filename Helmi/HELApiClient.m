@@ -51,7 +51,6 @@
     [self setUserName:libraryCardNumber andPassword:pinCode];
     
     RACSignal *login = [[self manager] rac_GET:[self loginUrl] parameters:nil];
-    login = [login logAll];
     return [login replayLazily];
 }
 
@@ -71,7 +70,6 @@
 {
     RACSignal *fetch = [[self manager] rac_GET:[self itemInformationUrlForItem:[item identifier]]
                                     parameters:nil];
-    fetch = [fetch logAll];
     return [fetch replayLazily];
 }
 
@@ -84,7 +82,6 @@
 - (RACSignal *)renewLoan:(HELLoanableItem *)item
 {
     RACSignal *renew = [[self manager] rac_POST:[self urlForRenewingLoan:[item identifier]] parameters:nil];
-    [renew logAll];
     return [renew replayLazily];
 }
 

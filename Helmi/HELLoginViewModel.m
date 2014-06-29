@@ -81,19 +81,14 @@
 
 - (RACSignal *)initiateLogIn
 {
-    NSLog(@"library card number: %@", self.libraryCardNumber);
-    NSLog(@"pin code: %@", self.pinCode);
+    NSLog(@"Trying to log in with card number: %@ using %@ as pincde", self.libraryCardNumber, self.pinCode);
     
-
     RACSignal *s = [self.apiClient executeLogIn:self.libraryCardNumber
                                         pinCode:self.pinCode];
     
     @weakify(self);
     [s subscribeNext:^(RACTuple *response) {
         @strongify(self);
-        NSLog(@"first: %@", response.first);
-        NSLog(@"second: %@", response.second);
-        
         NSDictionary *userInfo = response.last;
         
         NSArray *loanableItems = [self createLoanableItems:userInfo];
@@ -101,10 +96,11 @@
         
         self.currentUser = [[HELUser alloc] initWithUserInfo:userInfo
                                          andLoanableItems:loanableItems];
-        NSLog(@"user: %@", self.currentUser);
-        
+
         self.didSucceedToLogin = YES;
     } error:^(NSError *error) {
+        // TODO: handle login error
+        
         NSLog(@"network error: %@", error);
     }];
 
@@ -132,9 +128,6 @@
         RACSignal *fetch = [self.apiClient fetchInformationForLoanableItem:item];
         
         [fetch subscribeNext:^(RACTuple *response) {
-            NSLog(@"fill item: %@", [item identifier]);
-            NSLog(@"with: %@", response.second);
-            
             [item loadInformationFrom:response.second];
         } error:^(NSError *error) {
             NSLog(@"failed to fetch information for item: %@", [item identifier]);

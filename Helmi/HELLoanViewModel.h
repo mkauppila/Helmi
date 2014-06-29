@@ -24,6 +24,6 @@
 @class HELUser;
 
 @interface HELLoanViewModel : NSObject
-@property (strong, nonatomic) HELUser *currentUser;
-@property (strong, nonatomic) NSString *title;
+@property (nonatomic, strong) HELUser *currentUser;
+@property (nonatomic, copy) NSString *title;
 @end
