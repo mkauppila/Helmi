@@ -54,6 +54,13 @@
 			remoteGlobalIDString = 28678EA718A674E400A1960B;
 			remoteInfo = Helmi;
 		};
+		478D362E1960525F009FF925 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28678EA018A674E400A1960B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28678EA718A674E400A1960B;
+			remoteInfo = Helmi;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -323,6 +330,7 @@
 			);
 			dependencies = (
 				28678ECF18A674E400A1960B /* PBXTargetDependency */,
+				478D362F1960525F009FF925 /* PBXTargetDependency */,
 			);
 			name = UnitTest;
 			productName = HelmiTests;
@@ -494,6 +502,11 @@
 			isa = PBXTargetDependency;
 			target = 28678EA718A674E400A1960B /* Helmi */;
 			targetProxy = 28678ECE18A674E400A1960B /* PBXContainerItemProxy */;
+		};
+		478D362F1960525F009FF925 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28678EA718A674E400A1960B /* Helmi */;
+			targetProxy = 478D362E1960525F009FF925 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
