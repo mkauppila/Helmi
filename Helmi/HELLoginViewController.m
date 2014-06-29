@@ -77,21 +77,24 @@
         return [didSucceedToLogin boolValue];
     }] subscribeNext:^(NSNumber *x) {
         @strongify(self);
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        HELLoanViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"LoanTableViewControllerID"];
-        [controller setCurrentUser:[self.loginViewModel currentUser]];
-        
-        [self.navigationController pushViewController:controller
-                                             animated:YES];
-        
+        [self navigateForward];
     }];
 
     self.logInButton.rac_command = [self.loginViewModel logInCommand];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)navigateForward
 {
-    [super didReceiveMemoryWarning];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    HELLoanViewController *loanVC = [storyboard instantiateViewControllerWithIdentifier:@"LoanTableViewControllerID"];
+    [loanVC setCurrentUser:[self.loginViewModel currentUser]];
+
+    UINavigationController *contentNavigationVC = [[UINavigationController alloc] initWithRootViewController:loanVC];
+    contentNavigationVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    [self.navigationController presentViewController:contentNavigationVC
+                                            animated:YES
+                                          completion:NULL];
 }
 
 @end
