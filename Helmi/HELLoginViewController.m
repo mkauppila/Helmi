@@ -83,6 +83,9 @@
     self.logInButton.rac_command = [self.loginViewModel logInCommand];
 }
 
+
+#pragma mark - View navigation
+
 - (void)navigateForward
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

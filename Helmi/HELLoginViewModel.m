@@ -99,8 +99,7 @@
 
         self.didSucceedToLogin = YES;
     } error:^(NSError *error) {
-        // TODO: handle login error
-        NSLog(@"network error: %@", error);
+        self.loginErrorMessage = @"Login failed";
     }];
 
     return s;
