@@ -23,6 +23,7 @@
 
 @class RACSignal;
 @class RACCommand;
+@class RACSubject;
 
 @class HELApiClient;
 @class HELUser;
@@ -32,14 +33,12 @@
 @property (strong, nonatomic) NSString *libraryCardNumber;
 @property (strong, nonatomic) NSString *pinCode;
 
-@property (assign, nonatomic) BOOL didSucceedToLogin;
-@property (strong, nonatomic) NSString *loginErrorMessage;
+@property (nonatomic, strong, readonly) RACSubject *triedToLoginSignal;
 
 @property (strong, nonatomic) HELUser *currentUser;
 
-- (instancetype)initWithAPIClient:(HELApiClient *)apiClient;
 
-- (void)initializeForLogin;
+- (instancetype)initWithAPIClient:(HELApiClient *)apiClient;
 
 - (RACCommand *)logInCommand;
 

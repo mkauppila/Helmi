@@ -29,8 +29,10 @@
 #import "HELUser.h"
 #import "HELLoanableItem.h"
 
-@interface HELLoginViewModel ()
+@interface HELLoginViewModel () 
+
 @property (strong, nonatomic, readonly) HELApiClient *apiClient;
+
 @end
 
 @implementation HELLoginViewModel
@@ -40,37 +42,36 @@
     self = [super init];
     if (self) {
         _apiClient = apiClient;
+        _triedToLoginSignal = [[RACSubject alloc] init];
     }
     return self;
-}
-
-- (void)initializeForLogin
-{
-    self.didSucceedToLogin = NO;
-    self.loginErrorMessage = @"";
 }
 
 - (RACCommand *)logInCommand
 {
     @weakify(self);
     
-    RACSignal *enabled = [RACSignal combineLatest:@[RACObserve(self, libraryCardNumber),
-                                                    RACObserve(self, pinCode)]
-                                           reduce:^(NSString *cardNumber, NSString *pinCode) {
-                                               return @([self validateLibraryCardNumber:cardNumber] &&
-                                                        [self validatePinCode:pinCode]);
-                                           }];
-    RACCommand *login = [[RACCommand alloc] initWithEnabled:enabled
-                                                signalBlock:^RACSignal *(id input) {
-                                                    @strongify(self);
-                                                    return [self initiateLogIn];
-                                                }];
+    RACSignal *enabled = [RACSignal
+                          combineLatest:@[RACObserve(self, libraryCardNumber),
+                                          RACObserve(self, pinCode)]
+                          reduce:^(NSString *cardNumber, NSString *pinCode) {
+                              return @([self validateLibraryCardNumber:cardNumber] &&
+                                       [self validatePinCode:pinCode]);
+                          }];
+    
+    RACCommand *login = [[RACCommand alloc]
+                         initWithEnabled:enabled
+                         signalBlock:^RACSignal *(id input) {
+                             @strongify(self);
+                             return [self initiateLogIn];
+                         }];
     login.allowsConcurrentExecution = NO;
     return login;
 }
 
 - (BOOL)validateLibraryCardNumber:(NSString *)cardNumber
 {
+    // card number (or anyt other can't contain spaces!
     return cardNumber.length > 0;
 }
 
@@ -81,13 +82,13 @@
 
 - (RACSignal *)initiateLogIn
 {
-    NSLog(@"Trying to log in with card number: %@ using %@ as pincde", self.libraryCardNumber, self.pinCode);
+    NSLog(@"Trying to log in with card number: %@ using %@ as pincode", self.libraryCardNumber, self.pinCode);
     
-    RACSignal *s = [self.apiClient executeLogIn:self.libraryCardNumber
-                                        pinCode:self.pinCode];
+    RACSignal *loginSignal = [self.apiClient executeLogIn:self.libraryCardNumber
+                                                  pinCode:self.pinCode];
     
     @weakify(self);
-    [s subscribeNext:^(RACTuple *response) {
+    [loginSignal subscribeNext:^(RACTuple *response) {
         @strongify(self);
         NSDictionary *userInfo = response.last;
         
@@ -95,14 +96,18 @@
         [self fetchInformationForLoanableItems:loanableItems];
         
         self.currentUser = [[HELUser alloc] initWithUserInfo:userInfo
-                                         andLoanableItems:loanableItems];
+                                            andLoanableItems:loanableItems];
 
-        self.didSucceedToLogin = YES;
+        [self.triedToLoginSignal sendNext:nil];
     } error:^(NSError *error) {
-        self.loginErrorMessage = @"Login failed";
+        @strongify(self);
+        NSError *loginError = [NSError errorWithDomain:@"log-in"
+                                                  code:100
+                                              userInfo:@{@"message":@"Log in failed"}];
+        [self.triedToLoginSignal sendError:loginError];
     }];
 
-    return s;
+    return loginSignal;
 }
 
 - (NSArray *)createLoanableItems:(NSDictionary *)userInfo

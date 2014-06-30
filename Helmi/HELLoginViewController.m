@@ -54,35 +54,29 @@
 {
     [super viewDidLoad];
 
+    _loginErrorLabel.text = @"";
+    
     [self bindWithViewModel];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [self.loginViewModel initializeForLogin];
 }
 
 - (void)bindWithViewModel
 {
     RAC(self.loginViewModel, libraryCardNumber) = self.cardNumberTextField.rac_textSignal;
     RAC(self.loginViewModel, pinCode) = self.pinCodeTextField.rac_textSignal;
-    
-    RAC(self.loginErrorLabel, text) = RACObserve(self.loginViewModel, loginErrorMessage);
-    
-    @weakify(self);
-    [[[RACObserve(self.loginViewModel, didSucceedToLogin) distinctUntilChanged]
-      filter:^BOOL(NSNumber *didSucceedToLogin) {
-        return [didSucceedToLogin boolValue];
-    }] subscribeNext:^(NSNumber *x) {
-        @strongify(self);
-        [self navigateForward];
-    }];
 
     self.logInButton.rac_command = [self.loginViewModel logInCommand];
-}
 
+    [[self.loginViewModel triedToLoginSignal] subscribeNext:^(id x) {
+        [self navigateForward];
+    } error:^(NSError *error) {
+        self.loginErrorLabel.text = [[error userInfo] valueForKeyPath:@"name"];
+    }];
+}
 
 #pragma mark - View navigation
 
