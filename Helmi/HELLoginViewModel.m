@@ -72,12 +72,18 @@
 - (BOOL)validateLibraryCardNumber:(NSString *)cardNumber
 {
     // card number (or anyt other can't contain spaces!
-    return cardNumber.length > 0;
+    return cardNumber.length > 0 && [self containsWhitespace:cardNumber] == NO;
 }
 
 - (BOOL)validatePinCode:(NSString *)pinCode
 {
-    return pinCode.length >= 4;
+    return pinCode.length >= 4 && [self containsWhitespace:pinCode] == NO;
+}
+
+- (BOOL)containsWhitespace:(NSString *)string
+{
+    NSRange range = [string rangeOfCharacterFromSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    return range.location != NSNotFound;
 }
 
 - (RACSignal *)initiateLogIn
