@@ -68,22 +68,19 @@
 
 - (NSString *)parseAuthorFirstName:(NSString *)fullTitle
 {
-    NSArray *components = [fullTitle componentsSeparatedByString:@"/"];
-    
-    NSString *fullNameString = [[components lastObject] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    NSArray *nameParts = [fullNameString componentsSeparatedByString:@" "];
-    
-    return [nameParts firstObject];
+    return [[self allTitleComponentsFrom:fullTitle] firstObject];
 }
 
 - (NSString *)parseAuthorLastName:(NSString *)fullTitle
 {
+    return [[self allTitleComponentsFrom:fullTitle] lastObject];
+}
+
+- (NSArray *)allTitleComponentsFrom:(NSString *)fullTitle
+{
     NSArray *components = [fullTitle componentsSeparatedByString:@"/"];
-    
     NSString *fullNameString = [[components lastObject] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    NSArray *nameParts = [fullNameString componentsSeparatedByString:@" "];
-    
-    return [nameParts lastObject];
+    return [fullNameString componentsSeparatedByString:@" "];
 }
 
 - (NSString *)parseCirculationStatus:(NSDictionary *)circulationInfo
