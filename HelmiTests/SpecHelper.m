@@ -14,6 +14,6 @@ NSDictionary *LoadTestData(NSString *fileName)
                                 pathForResource:fileName ofType:@"json"];
     NSData *jsonData = [NSData dataWithContentsOfFile:pathToTestData];
     return [NSJSONSerialization JSONObjectWithData:jsonData
-                                           options:kNilOptions
+                                           options:NSJSONReadingMutableContainers
                                              error:NULL];
 }

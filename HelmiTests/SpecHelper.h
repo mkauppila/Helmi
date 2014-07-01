@@ -6,6 +6,6 @@
 //  Copyright (c) 2014 Markus Kauppila. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 NSDictionary *LoadTestData(NSString *fileName);
