@@ -27,6 +27,8 @@
 
 #import "HELLoanableItem.h"
 
+static NSString *const kBaseUrl = @"https://lainakortti.helmet-kirjasto.fi";
+
 @interface HELApiClient () {
     AFHTTPRequestOperationManager *_manager;
 }
@@ -62,8 +64,7 @@
 
 - (NSString *)loginUrl
 {
-    return [NSString stringWithFormat:@"https://lainakortti.helmet-kirjasto.fi/patron/%@",
-            self.user];
+    return [kBaseUrl stringByAppendingFormat:@"/patron/%@", self.user];
 }
 
 - (RACSignal *)fetchInformationForLoanableItem:(HELLoanableItem *)item
@@ -75,8 +76,8 @@
 
 - (NSString *)itemInformationUrlForItem:(NSString *)itemIdentifier
 {
-    return [NSString stringWithFormat:@"https://lainakortti.helmet-kirjasto.fi/item/%@",
-            itemIdentifier];
+    
+    return [kBaseUrl stringByAppendingFormat:@"/item/%@", itemIdentifier];
 }
 
 - (RACSignal *)renewLoan:(HELLoanableItem *)item
@@ -87,7 +88,7 @@
 
 - (NSString *)urlForRenewingLoan:(NSString *)identifier
 {
-    return [NSString stringWithFormat:@"https://lainakortti.helmet-kirjasto.fi/patron/%@/loan?item=%@", self.user, identifier];
+    return [kBaseUrl stringByAppendingFormat:@"/patron/%@/loan?item=%@", self.user, identifier];
 }
 
 - (AFHTTPRequestOperationManager *)manager
