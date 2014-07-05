@@ -45,12 +45,12 @@
 
 - (void)loadInformationFrom:(NSDictionary *)itemInfo
 {
-    self.title = [self parseBookTitle:itemInfo[@"title identifier"]];
-    self.circulationStatus = [self parseCirculationStatus:itemInfo[@"circulation status"]];
-    self.dueDate = [self parseDueDateFrom:itemInfo[@"due date"]];
+    self.title = itemInfo[@"title"];
+    self.authorFirstName = [self parseAuthorFirstName:itemInfo[@"author"]];
+    self.authorLastName = [self parseAuthorLastName:itemInfo[@"author"]];
     
-    self.authorFirstName = [self parseAuthorFirstName:itemInfo[@"title identifier"]];
-    self.authorLastName = [self parseAuthorLastName:itemInfo[@"title identifier"]];
+    // TODO: parse publisher, year
+    // We need to get the dueDate, circulationStatus using the other API
 }
 
 - (NSDate *)parseDueDateFrom:(NSString *)dateString
@@ -66,14 +66,16 @@
     return [[components firstObject] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-- (NSString *)parseAuthorFirstName:(NSString *)fullTitle
+- (NSString *)parseAuthorFirstName:(NSString *)author
 {
-    return [[self allTitleComponentsFrom:fullTitle] firstObject];
+    NSString *firstName = [[author componentsSeparatedByString:@","] firstObject];
+    return [firstName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-- (NSString *)parseAuthorLastName:(NSString *)fullTitle
+- (NSString *)parseAuthorLastName:(NSString *)author
 {
-    return [[self allTitleComponentsFrom:fullTitle] lastObject];
+    NSString *lastName = [[author componentsSeparatedByString:@","] lastObject];
+    return [lastName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
 - (NSArray *)allTitleComponentsFrom:(NSString *)fullTitle
