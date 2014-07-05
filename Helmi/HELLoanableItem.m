@@ -43,7 +43,7 @@
     return self;
 }
 
-- (void)loadInformationFrom:(NSDictionary *)itemInfo
+- (void)loadMetaInformationFrom:(NSDictionary *)itemInfo
 {
     self.title = itemInfo[@"title"];
     self.authorFirstName = [self parseAuthorFirstName:itemInfo[@"author"]];

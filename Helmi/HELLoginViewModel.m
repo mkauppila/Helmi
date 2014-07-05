@@ -140,7 +140,7 @@
         [loanableItems enumerateObjectsUsingBlock:^(HELLoanableItem *item, NSUInteger idx, BOOL *stop) {
             NSDictionary *record = [records objectForKey:[item identifier]];
             if (record) {
-                [item loadInformationFrom:record];
+                [item loadMetaInformationFrom:record];
             }
         }];
     }];

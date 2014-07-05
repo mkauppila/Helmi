@@ -21,7 +21,7 @@ describe(@"Loanble item", ^{
         item = [[HELLoanableItem alloc] initWithIdentifier:@"123456"];
         NSDictionary *itemInfo = LoadTestData(@"item");
 
-        [item loadInformationFrom:itemInfo];
+        [item loadMetaInformationFrom:itemInfo];
     });
     
     afterEach(^{
