@@ -133,13 +133,15 @@
 
 - (void)fetchInformationForLoanableItems:(NSArray *)loanableItems
 {
-    [loanableItems enumerateObjectsUsingBlock:^(HELLoanableItem *item, NSUInteger idx, BOOL *stop) {
-        RACSignal *fetch = [self.apiClient fetchInformationForLoanableItem:item];
+    RACSignal *metadataFetch = [self.apiClient fetchMetaInformationForLoanableItems:loanableItems];
+    [metadataFetch subscribeNext:^(RACTuple *response) {
+        NSDictionary *records = [response.second valueForKeyPath:@"records"];
         
-        [fetch subscribeNext:^(RACTuple *response) {
-            [item loadInformationFrom:response.second];
-        } error:^(NSError *error) {
-            NSLog(@"failed to fetch information for item: %@", [item identifier]);
+        [loanableItems enumerateObjectsUsingBlock:^(HELLoanableItem *item, NSUInteger idx, BOOL *stop) {
+            NSDictionary *record = [records objectForKey:[item identifier]];
+            if (record) {
+                [item loadInformationFrom:record];
+            }
         }];
     }];
 }
