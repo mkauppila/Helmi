@@ -31,6 +31,7 @@
 
 - (RACSignal *)executeLogIn:(NSString *)libraryCardNumber pinCode:(NSString *)pinCode;
 
+- (RACSignal *)fetchMetaInformationForLoanableItems:(NSArray *)items;
 - (RACSignal *)fetchInformationForLoanableItem:(HELLoanableItem *)item;
 
 - (RACSignal *)renewLoan:(HELLoanableItem *)item;

@@ -67,6 +67,26 @@ static NSString *const kBaseUrl = @"https://lainakortti.helmet-kirjasto.fi";
     return [kBaseUrl stringByAppendingFormat:@"/patron/%@", self.user];
 }
 
+- (RACSignal *)fetchMetaInformationForLoanableItems:(NSArray *)items
+{
+    if ([items count] == 0) {
+        return [RACSignal empty];
+    }
+   
+    return [[[self manager] rac_GET:[self urlForMetaInformationOfLoanableItems:items]
+                         parameters:nil]
+            replayLazily];
+}
+
+- (NSString *)urlForMetaInformationOfLoanableItems:(NSArray *)items
+{
+    __block NSString *url = @"http://metadata.helmet-kirjasto.fi/search/item.json?";
+    [items enumerateObjectsUsingBlock:^(HELLoanableItem *item, NSUInteger idx, BOOL *stop) {
+        url = [url stringByAppendingFormat:@"query[]=%@&", [item identifier]];
+    }];
+    return url;
+}
+
 - (RACSignal *)fetchInformationForLoanableItem:(HELLoanableItem *)item
 {
     RACSignal *fetch = [[self manager] rac_GET:[self itemInformationUrlForItem:[item identifier]]
@@ -76,7 +96,6 @@ static NSString *const kBaseUrl = @"https://lainakortti.helmet-kirjasto.fi";
 
 - (NSString *)itemInformationUrlForItem:(NSString *)itemIdentifier
 {
-    
     return [kBaseUrl stringByAppendingFormat:@"/item/%@", itemIdentifier];
 }
 
