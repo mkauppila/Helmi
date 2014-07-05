@@ -78,13 +78,6 @@
     return [lastName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-- (NSArray *)allTitleComponentsFrom:(NSString *)fullTitle
-{
-    NSArray *components = [fullTitle componentsSeparatedByString:@"/"];
-    NSString *fullNameString = [[components lastObject] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    return [fullNameString componentsSeparatedByString:@" "];
-}
-
 - (NSString *)parseCirculationStatus:(NSDictionary *)circulationInfo
 {
     return circulationInfo[@"name"];
