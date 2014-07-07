@@ -43,6 +43,7 @@
 		28C762A118C5BE2C00BF15C2 /* LoanableItemSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C762A018C5BE2C00BF15C2 /* LoanableItemSpec.m */; };
 		28C762A318C5C06C00BF15C2 /* item.json in Resources */ = {isa = PBXBuildFile; fileRef = 28C762A218C5C06C00BF15C2 /* item.json */; };
 		46C1A7019DA84C9FAE8A8816 /* libPods-UnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC661A8B3A7D440BA7BDC760 /* libPods-UnitTest.a */; };
+		474F6685196ABA0B00FBFFFC /* NSArray+Helmi.m in Sources */ = {isa = PBXBuildFile; fileRef = 474F6684196ABA0B00FBFFFC /* NSArray+Helmi.m */; };
 		6BD378717E874D7C972A7544 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 770592FAD1AC40BDA82AA1FA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,8 @@
 		28C762A018C5BE2C00BF15C2 /* LoanableItemSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanableItemSpec.m; sourceTree = "<group>"; };
 		28C762A218C5C06C00BF15C2 /* item.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = item.json; sourceTree = "<group>"; };
 		471E4C9D190D6481001CDDD7 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = Xcconfig/Project.xcconfig; sourceTree = "<group>"; };
+		474F6684196ABA0B00FBFFFC /* NSArray+Helmi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Helmi.m"; sourceTree = "<group>"; };
+		474F6686196ABA3900FBFFFC /* NSArray+Helmi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Helmi.h"; sourceTree = "<group>"; };
 		475E0B24193B7C5F008FF72E /* Test-Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Test-Common.xcconfig"; sourceTree = "<group>"; };
 		47B73BFC1931D8F900B8B8F6 /* App-Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "App-Common.xcconfig"; path = "Xcconfig/App-Common.xcconfig"; sourceTree = "<group>"; };
 		5F48A13424EA4B539FFA98BD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 				28A147F718DA081500EF855D /* Models */,
 				28678EC318A674E400A1960B /* Images.xcassets */,
 				28678EB218A674E400A1960B /* Supporting Files */,
+				474F6684196ABA0B00FBFFFC /* NSArray+Helmi.m */,
+				474F6686196ABA3900FBFFFC /* NSArray+Helmi.h */,
 			);
 			path = Helmi;
 			sourceTree = "<group>";
@@ -480,6 +485,7 @@
 				2820A0D618DAE9A100DCAC81 /* HELLoanCell.m in Sources */,
 				28462A6518B9EEC70011A14D /* HELUser.m in Sources */,
 				28C7629918C4ABB100BF15C2 /* HELLoanableItem.m in Sources */,
+				474F6685196ABA0B00FBFFFC /* NSArray+Helmi.m in Sources */,
 				28678EC218A674E400A1960B /* HELLoginViewController.m in Sources */,
 				28C7629518C4610E00BF15C2 /* HELLoanTableDataSource.m in Sources */,
 				2832BCEB18CB79060067FBA3 /* HELLoanDetailViewController.m in Sources */,
