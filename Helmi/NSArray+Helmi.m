@@ -19,6 +19,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@interface NSArray (Helmi)
+#import "NSArray+Helmi.h"
+
+@implementation NSArray (Helmi)
+
+- (BOOL)isEmpty
+{
+    return [self count] == 0;
+}
 
 @end

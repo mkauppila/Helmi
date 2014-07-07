@@ -19,6 +19,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@implementation NSArray (Helmi)
+@interface NSArray (Helmi)
+
+- (BOOL)isEmpty;
 
 @end
+
