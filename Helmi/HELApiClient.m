@@ -25,6 +25,8 @@
 #import <libextobjc/EXTScope.h>
 #import <AFHTTPRequestOperationManager+RACSupport.h>
 
+#import "NSArray+Helmi.h"
+
 #import "HELLoanableItem.h"
 
 static NSString *const kBaseUrl = @"https://lainakortti.helmet-kirjasto.fi";
@@ -69,7 +71,7 @@ static NSString *const kBaseUrl = @"https://lainakortti.helmet-kirjasto.fi";
 
 - (RACSignal *)fetchMetaInformationForLoanableItems:(NSArray *)items
 {
-    if ([items count] == 0) {
+    if ([items isEmpty]) {
         return [RACSignal empty];
     }
    
