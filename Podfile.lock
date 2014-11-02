@@ -20,11 +20,7 @@ PODS:
   - AFNetworking/Serialization (2.1.0)
   - AFNetworking/UIKit (2.1.0):
     - AFNetworking/NSURLConnection
-  - Kiwi/ARC (2.2.4)
-  - Kiwi/NonARC (2.2.4)
-  - Kiwi/XCTest (2.2.4):
-    - Kiwi/ARC
-    - Kiwi/NonARC
+  - Kiwi (2.3.0)
   - libextobjc (0.3):
     - libextobjc/EXTADT
     - libextobjc/EXTAnnotation
@@ -120,7 +116,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.1.0)
   - AFNetworking-RACExtensions (from `https://github.com/knshiro/AFNetworking-RACExtensions.git`)
-  - Kiwi/XCTest
+  - Kiwi
   - libextobjc (= 0.3)
   - ReactiveCocoa (~> 2.1.7)
 
@@ -131,9 +127,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 7c33510b46f994bc75b75c6e63c1d83414ca40f2
   AFNetworking-RACExtensions: 4f7633edc5618e771f1c034ec3eb6974fe9eb441
-  Kiwi: c73667f2b84cbf36f1a3830267c5a4ae8dcbd8ba
+  Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
   libextobjc: f1b1ea2e42fbfe7ae5d4f8624bbb4f56002e8536
-  libffi: d761a0d436543b65d7262a1e7942ca664a687758
+  libffi: c6c0bfc3b84872fd99e0e35f8d9665fc7a996f6f
   ReactiveCocoa: 399d3ad0c8ac73d79bed5bcd076a04f46ec635fc
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.34.4

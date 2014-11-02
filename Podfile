@@ -1,5 +1,6 @@
 platform :ios, '7.0'
 
+source 'https://github.com/CocoaPods/Specs.git'
 inhibit_all_warnings!
 
 pod 'ReactiveCocoa',    '~> 2.1.7'
@@ -8,5 +9,5 @@ pod 'AFNetworking',     '~> 2.1.0'
 pod 'AFNetworking-RACExtensions', :git => 'https://github.com/knshiro/AFNetworking-RACExtensions.git'
 
 target :UnitTest, :exclusive => true do
-  pod 'Kiwi/XCTest'
+  pod 'Kiwi'
 end
