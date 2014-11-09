@@ -35,5 +35,6 @@
 
 - (instancetype)initWithIdentifier:(NSString *)identifier;
 
+- (void)loadInformationFrom:(NSDictionary *)itemInfo;
 - (void)loadMetaInformationFrom:(NSDictionary *)itemInfo;
 @end

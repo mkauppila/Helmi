@@ -99,6 +99,7 @@
         NSDictionary *userInfo = response.last;
         
         NSArray *loanableItems = [self createLoanableItems:userInfo];
+        [self fetchMetaInformationForLoanableItems:loanableItems];
         [self fetchInformationForLoanableItems:loanableItems];
         
         self.currentUser = [[HELUser alloc] initWithUserInfo:userInfo
@@ -132,6 +133,17 @@
 }
 
 - (void)fetchInformationForLoanableItems:(NSArray *)loanableItems
+{
+    [loanableItems enumerateObjectsUsingBlock:^(HELLoanableItem *item, NSUInteger idx, BOOL *stop) {
+        RACSignal *infoFetch = [self.apiClient fetchInformationForLoanableItem:item];
+        [infoFetch subscribeNext:^(RACTuple *response) {
+            NSDictionary *info = response.second;
+            [item loadInformationFrom:info];
+        }];
+    }];
+}
+
+- (void)fetchMetaInformationForLoanableItems:(NSArray *)loanableItems
 {
     RACSignal *metadataFetch = [self.apiClient fetchMetaInformationForLoanableItems:loanableItems];
     [metadataFetch subscribeNext:^(RACTuple *response) {

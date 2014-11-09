@@ -43,6 +43,10 @@
     return self;
 }
 
+- (void)loadInformationFrom:(NSDictionary *)itemInfo
+{
+}
+
 - (void)loadMetaInformationFrom:(NSDictionary *)itemInfo
 {
     self.title = itemInfo[@"title"];
