@@ -50,6 +50,8 @@ static NSString *const kBaseUrl = @"https://lainakortti.helmet-kirjasto.fi";
     return client;
 }
 
+#pragma mark - Log in
+
 - (RACSignal *)executeLogIn:(NSString *)libraryCardNumber pinCode:(NSString *)pinCode
 {
     [self setUserName:libraryCardNumber andPassword:pinCode];
@@ -68,6 +70,8 @@ static NSString *const kBaseUrl = @"https://lainakortti.helmet-kirjasto.fi";
 {
     return [kBaseUrl stringByAppendingFormat:@"/patron/%@", self.user];
 }
+
+#pragma mark - Metainformation for loanable items
 
 - (RACSignal *)fetchMetaInformationForLoanableItems:(NSArray *)items
 {
@@ -89,6 +93,8 @@ static NSString *const kBaseUrl = @"https://lainakortti.helmet-kirjasto.fi";
     return url;
 }
 
+#pragma mark - Fetch status information for loanable items
+
 - (RACSignal *)fetchInformationForLoanableItem:(HELLoanableItem *)item
 {
     RACSignal *fetch = [[self manager] rac_GET:[self itemInformationUrlForItem:[item identifier]]
@@ -101,6 +107,8 @@ static NSString *const kBaseUrl = @"https://lainakortti.helmet-kirjasto.fi";
     return [kBaseUrl stringByAppendingFormat:@"/item/%@", itemIdentifier];
 }
 
+#pragma mark - Renew loan
+
 - (RACSignal *)renewLoan:(HELLoanableItem *)item
 {
     RACSignal *renew = [[self manager] rac_POST:[self urlForRenewingLoan:[item identifier]] parameters:nil];
@@ -111,6 +119,8 @@ static NSString *const kBaseUrl = @"https://lainakortti.helmet-kirjasto.fi";
 {
     return [kBaseUrl stringByAppendingFormat:@"/patron/%@/loan?item=%@", self.user, identifier];
 }
+
+#pragma mark -
 
 - (AFHTTPRequestOperationManager *)manager
 {
